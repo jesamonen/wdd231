@@ -1,0 +1,53 @@
+[
+  {
+    "id": 1,
+    "name": "Precious Paints",
+    "address": "127 Market Road",
+    "phone": "+234-800-111-1111",
+    "website": "https://preciouspaints.com",
+    "image": "images/paint.jpg",
+    "membership": "Gold",
+    "description": "Professional residential and commercial painting."
+  },
+   {
+    "id": 2,
+    "name": "OsuwakePaints",
+    "address": "123 Market Road",
+    "phone": "+234-800-111-7511",
+    "website": "https://osuwakepaints.com",
+    "image": "images/osuwake.jpg",
+    "membership": "Gold",
+    "description": "Professional residential and commercial painting."
+  },
+  {
+    "id": 3,
+    "name": "Vento Furniture",
+    "address": "45 Central Avenue",
+    "phone": "+234-800-222-2222",
+    "website": "https://ventofurniture.com",
+    "image": "images/vento.webp",
+    "membership": "Silver",
+    "description": "Modern furniture for homes and offices."
+  },
+  {
+    "id": 4,
+    "name": "Sim Electronics",
+    "address": "18 Airport Road",
+    "phone": "+234-800-333-3333",
+    "website": "https://simsng.com",
+    "image": "images/simsng.png",
+    "membership": "Gold",
+    "description": "Electronics and accessories."
+  },
+{
+  "id": 5,
+  "name": "Autochek",
+  "address": "125 Market Road",
+  "phone": "+234-800-000-1111",
+  "website": "https://autochek.africa",
+  "image": "images/autochek.webp",
+  "membership": "Gold",
+  "description": "Professional car sales and services."
+}
+
+]

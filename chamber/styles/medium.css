@@ -1,0 +1,17 @@
+@media (min-width:640px){
+
+#menuBtn{
+    display:none;
+}
+
+#menu{
+    display:flex;
+    justify-content:center;
+}
+
+#menu li{
+    flex:1;
+    text-align:center;
+}
+
+}

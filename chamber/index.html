@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Osuwake Chamber of Commerce</title>
+    <meta name="description" content="Official Chamber of Commerce for Osuwake.">
+    <meta name="author" content="Jesam Onen">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/medium.css">
+    <link rel="stylesheet" href="styles/large.css">
+    
+    <script src="scripts/main.js" defer></script>
+     <script src="scripts/weather.js" defer></script>
+</head>
+
+<body>
+
+<header>
+
+    <img src="images/logo.jpg"
+         alt="Osuwake Chamber Logo"
+         width="80"
+         height="80">
+
+    <h1>Osuwake Chamber of Commerce</h1>
+
+</header>
+
+<nav>
+
+    <button id="menuBtn">&#9776;</button>
+
+    <ul id="menu">
+        <li><a class="active" href="index.html">Home</a></li>
+        <li><a href="discover.html">Discover</a></li>
+        <li><a href="directory.html">Directory</a></li>
+        <li><a href="join.html">Join</a></li>
+    </ul>
+
+</nav>
+
+<main>
+
+    <!-- Hero Section -->
+    <section class="hero">
+
+        <picture>
+            <source srcset="images/hero-small.webp" media="(min-width:1024px)">
+            <source srcset="images/hero-small.webp" media="(min-width:640px)">
+            <img src="images/hero-small.webp"
+                 alt="Osuwake City"
+                 width="1200"
+                 height="600">
+        </picture>
+
+        <div class="hero-text">
+            <h2>Welcome to Osuwake Chamber of Commerce</h2>
+
+            <p>
+                Supporting local businesses and building a stronger community.
+            </p>
+
+            <a class="cta-button" href="join.html">
+                Join the Chamber
+            </a>
+        </div>
+
+    </section>
+
+    <!-- Events -->
+    <section class="card">
+
+        <h2>Upcoming Events</h2>
+
+        <ul>
+            <li>Business Networking Breakfast</li>
+            <li>Small Business Workshop</li>
+            <li>Community Trade Fair</li>
+        </ul>
+
+    </section>
+
+    <!-- Weather -->
+    <section class="card">
+
+        <h2>Current Weather</h2>
+
+        <p id="temperature">Loading...</p>
+
+        <p id="conditions"></p>
+
+    </section>
+
+    <!-- Forecast -->
+    <section class="card">
+
+        <h2>3-Day Forecast</h2>
+
+        <div id="forecast"></div>
+
+    </section>
+
+    <!-- Spotlights -->
+    <section class="card">
+
+        <h2>Business Spotlights</h2>
+
+        <div id="spotlights"></div>
+
+    </section>
+
+</main>
+
+<footer>
+
+<p>&copy; <span id="year"></span> Osuwake Chamber of Commerce</p>
+
+<p id="lastModified"></p>
+
+
+
+    <div class="social">
+<div class="social-links">
+    <a href="https://facebook.com/yourpage" target="_blank" aria-label="Facebook">
+        <i class="fab fa-facebook-f"></i>
+    </a>
+
+    <a href="https://instagram.com/yourpage" target="_blank" aria-label="Instagram">
+        <i class="fab fa-instagram"></i>
+    </a>
+
+    <a href="https://twitter.com/yourpage" target="_blank" aria-label="X">
+        <i class="fab fa-x-twitter"></i>
+    </a>
+
+    <a href="https://linkedin.com/in/yourprofile" target="_blank" aria-label="LinkedIn">
+        <i class="fab fa-linkedin-in"></i>
+    </a>
+
+    <a href="https://youtube.com/@yourchannel" target="_blank" aria-label="YouTube">
+        <i class="fab fa-youtube"></i>
+    </a>
+</div>
+
+    
+
+
+
+</footer>
+
+</body>
+</html>
