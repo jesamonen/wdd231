@@ -4,156 +4,122 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Osuwake Chamber of Commerce</title>
-    <meta name="description" content="Official Chamber of Commerce for Osuwake.">
+    <title>WDD 231 | Jesam Onen</title>
+
+    <meta name="description" content="WDD 231 course home page for Jesam Onen">
     <meta name="author" content="Jesam Onen">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/small.css">
-    <link rel="stylesheet" href="styles/medium.css">
-    <link rel="stylesheet" href="styles/large.css">
-    
-    <script src="scripts/main.js" defer></script>
-     <script src="scripts/weather.js" defer></script>
+    <link rel="stylesheet" href="styles/larger.css">
+
+    <!-- JavaScript -->
+    <script src="scripts/navigation.js" defer></script>
+    <script src="scripts/date.js" defer></script>
+    <script src="scripts/course.js" defer></script>
 </head>
 
 <body>
-
 <header>
+    <div class="logo">
+        <!-- Simple SVG Logo -->
+        <svg width="50" height="50" viewBox="0 0 100 100" aria-hidden="true">
+            <circle cx="50" cy="50" r="45" fill="#0d6efd"></circle>
+            <text x="50" y="60" text-anchor="middle" font-size="42" fill="white" font-family="Arial">J</text>
+        </svg>
 
-    <img src="images/logo.jpg"
-         alt="Osuwake Chamber Logo"
-         width="80"
-         height="80">
+        <span>Jesam Onen</span>
+    </div>
 
-    <h1>Osuwake Chamber of Commerce</h1>
-
+    <button id="menuBtn" aria-label="Open Navigation Menu">
+        ☰
+    </button>
 </header>
 
 <nav>
-
-    <button id="menuBtn">&#9776;</button>
-
-    <ul id="menu">
-        <li><a class="active" href="index.html">Home</a></li>
-        <li><a href="discover.html">Discover</a></li>
-        <li><a href="directory.html">Directory</a></li>
-        <li><a href="join.html">Join</a></li>
+    <ul id="navMenu">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="chamber/index.html">Chamber</a></li>
+        <li><a href="final/index.html">Final</a></li>
     </ul>
-
 </nav>
 
-<main>
+  <main>
 
-    <!-- Hero Section -->
-    <section class="hero">
+    <h1>Home</h1>
 
-        <picture>
-            <source srcset="images/hero-small.webp" media="(min-width:1024px)">
-            <source srcset="images/hero-small.webp" media="(min-width:640px)">
-            <img src="images/hero-small.webp"
-                 alt="Osuwake City"
-                 width="1200"
-                 height="600">
-        </picture>
+    <section class="about">
+        <h2>About Me</h2>
 
-        <div class="hero-text">
-            <h2>Welcome to Osuwake Chamber of Commerce</h2>
+        <p>
+            Hello! My name is Jesam Onen. I am currently studying Web Design and
+            Development and enjoy learning HTML, CSS, JavaScript, and software
+            development. This page will showcase my coursework and projects
+            throughout the semester.
+        </p>
+    </section>
 
-            <p>
-                Supporting local businesses and building a stronger community.
-            </p>
+    <section class="location">
+        <h2>My Location</h2>
 
-            <a class="cta-button" href="join.html">
-                Join the Chamber
-            </a>
+        <img src="images/nigeria.jpg"
+             alt="Scenery from Nigeria"
+             width="500"
+             height="300">
+
+        <p>Nigeria</p>
+    </section>
+
+    <section class="certificate">
+        <h2>Web and Computer Programming Certificate</h2>
+
+        <div class="course-buttons">
+            <button id="allBtn">All Courses</button>
+            <button id="wddBtn">WDD Courses</button>
+            <button id="cseBtn">CSE Courses</button>
         </div>
 
-    </section>
+        <div id="courses"></div>
 
-    <!-- Events -->
-    <section class="card">
-
-        <h2>Upcoming Events</h2>
-
-        <ul>
-            <li>Business Networking Breakfast</li>
-            <li>Small Business Workshop</li>
-            <li>Community Trade Fair</li>
-        </ul>
-
-    </section>
-
-    <!-- Weather -->
-    <section class="card">
-
-        <h2>Current Weather</h2>
-
-        <p id="temperature">Loading...</p>
-
-        <p id="conditions"></p>
-
-    </section>
-
-    <!-- Forecast -->
-    <section class="card">
-
-        <h2>3-Day Forecast</h2>
-
-        <div id="forecast"></div>
-
-    </section>
-
-    <!-- Spotlights -->
-    <section class="card">
-
-        <h2>Business Spotlights</h2>
-
-        <div id="spotlights"></div>
+        <p id="totalCredits"></p>
 
     </section>
 
 </main>
 
-<footer>
+    <footer>
 
-<p>&copy; <span id="year"></span> Osuwake Chamber of Commerce</p>
-
-<p id="lastModified"></p>
-
-
-
-   <div class="social">
-    <div class="social-links">
-        <a href="https://facebook.com/yourpage" target="_blank" aria-label="Facebook">
-            <i class="fab fa-facebook-f"></i>
+    <div class="social">
+        <a href=" https://jesamonen.github.io/wdd231/index.html" target="_blank" aria-label="GitHub">
+            GitHub
         </a>
 
-        <a href="https://instagram.com/yourpage" target="_blank" aria-label="Instagram">
-            <i class="fab fa-instagram"></i>
+        <a href="https://www.linkedin.com/in/onenjessie/" target="_blank" aria-label="LinkedIn">
+            LinkedIn
         </a>
 
-        <a href="https://twitter.com/yourpage" target="_blank" aria-label="X">
-            <i class="fab fa-x-twitter"></i>
-        </a>
-
-        <a href="https://linkedin.com/in/yourprofile" target="_blank" aria-label="LinkedIn">
-            <i class="fab fa-linkedin-in"></i>
-        </a>
-
-        <a href="https://youtube.com/@yourchannel" target="_blank" aria-label="YouTube">
-            <i class="fab fa-youtube"></i>
+        <a href="https://x.com/jesamonen" target="_blank" aria-label="X">
+            X
         </a>
     </div>
-</div>
+
+    <div class="copyright">
+        <p>
+            &copy; <span id="currentYear"></span> Jesam Onen | Nigeria
+        </p>
+    </div>
+
+    <div class="modified">
+        <p id="lastModified"></p>
+    </div>
 
 </footer>
-
-    
-
-
-
-
 
 </body>
 </html>
