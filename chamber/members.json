@@ -1,0 +1,71 @@
+[
+{
+"name":"Tech Solutions Ltd",
+"address":"12 Marina, Lagos",
+"phone":"+2348011111111",
+"website":"https://techsolutions.com",
+"image":"company1.webp",
+"membership":3,
+"description":"IT consulting and software development."
+},
+
+{
+"name":"Green Farms",
+"address":"Lekki, Lagos",
+"phone":"+2348022222222",
+"website":"https://greenfarms.com",
+"image":"company2.webp",
+"membership":2,
+"description":"Agricultural products."
+},
+
+{
+"name":"Ocean Logistics",
+"address":"Apapa",
+"phone":"+2348033333333",
+"website":"https://oceanlogistics.com",
+"image":"company3.webp",
+"membership":1,
+"description":"Shipping services."
+},
+
+{
+"name":"Prime Bank",
+"address":"Ikeja",
+"phone":"+2348044444444",
+"website":"https://primebank.com",
+"image":"company4.webp",
+"membership":3,
+"description":"Banking services."
+},
+
+{
+"name":"Royal Hotel",
+"address":"Victoria Island",
+"phone":"+2348055555555",
+"website":"https://royalhotel.com",
+"image":"company5.webp",
+"membership":2,
+"description":"Luxury accommodation."
+},
+
+{
+"name":"ABC Supermarket",
+"address":"Yaba",
+"phone":"+2348066666666",
+"website":"https://abcmarket.com",
+"image":"company6.webp",
+"membership":1,
+"description":"Retail shopping."
+},
+
+{
+"name":"Sky Travels",
+"address":"Surulere",
+"phone":"+2348077777777",
+"website":"https://skytravels.com",
+"image":"company7.webp",
+"membership":3,
+"description":"Travel agency."
+}
+]
