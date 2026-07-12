@@ -1,0 +1,65 @@
+[
+  {
+    "name": "Elite Wall Screeding & Painting",
+    "address": "12 Oba Akran Avenue, Ikeja, Lagos",
+    "phone": "+234 803 111 2222",
+    "website": "https://example.com/elitescreeding",
+    "image": "images/elite-paint.png",
+    "level": 3,
+    "tagline": "Premium wall finishes and architectural coatings."
+  },
+  {
+    "name": "Divine Stars Academy",
+    "address": "45 Allen Avenue, Ikeja, Lagos",
+    "phone": "+234 802 333 4444",
+    "website": "https://example.com/divinestars",
+    "image": "images/divine-stars.png",
+    "level": 2,
+    "tagline": "Nurturing the leaders of tomorrow."
+  },
+  {
+    "name": "Emonoja Baking Co.",
+    "address": "78 Lekki Phase 1, Lagos",
+    "phone": "+234 805 555 6666",
+    "website": "https://example.com/emonoja-bakes",
+    "image": "images/emonoja-baking.png",
+    "level": 2,
+    "tagline": "Custom cakes, pastries, and artisanal breads."
+  },
+  {
+    "name": "Cortex Media Logistics",
+    "address": "8 Broad Street, Lagos Island, Lagos",
+    "phone": "+234 812 777 8888",
+    "website": "https://example.com/cortexmedia",
+    "image": "images/cortex-media.png",
+    "level": 1,
+    "tagline": "Digital content creation and audio production."
+  },
+  {
+    "name": "Lagchem Paint Ingredients",
+    "address": "15 Ojota Chemical Market, Ojota, Lagos",
+    "phone": "+234 809 999 0000",
+    "website": "https://example.com/lagchem",
+    "image": "images/lagchem.png",
+    "level": 3,
+    "tagline": "Top-grade acrylic binders, resins, and extenders."
+  },
+  {
+    "name": "Hopechamps Secondary School",
+    "address": "22 Surulere Way, Surulere, Lagos",
+    "phone": "+234 803 444 5555",
+    "website": "https://example.com/hopechamps",
+    "image": "images/hopechamps.png",
+    "level": 1,
+    "tagline": "Academic excellence and character development."
+  },
+  {
+    "name": "Vanguard Tech Solutions",
+    "address": "31 Victoria Island, Lagos",
+    "phone": "+234 806 222 3333",
+    "website": "https://example.com/vanguardtech",
+    "image": "images/vanguardtech.png",
+    "level": 3,
+    "tagline": "Custom front-end and full-stack development."
+  }
+]

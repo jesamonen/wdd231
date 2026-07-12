@@ -1,0 +1,106 @@
+/* Core element styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    background-color: #0f2c59;
+    color: white;
+    padding: 1rem;
+    position: relative;
+}
+
+#menu-toggle {
+    position: absolute;
+    right: 1rem;
+    top: 1.5rem;
+    font-size: 1.5rem;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+#primary-nav ul {
+    display: none;
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0 0 0;
+}
+
+#primary-nav.open ul {
+    display: block;
+}
+
+#primary-nav li a {
+    display: block;
+    color: white;
+    padding: 0.75rem;
+    text-decoration: none;
+    border-bottom: 1px solid #1e3d6b;
+}
+
+/* Directory Layout Configurations */
+.directory-controls {
+    text-align: center;
+    margin: 1.5rem 0;
+}
+
+.directory-controls button {
+    padding: 0.5rem 1rem;
+    margin: 0 0.25rem;
+    cursor: pointer;
+}
+
+.directory-controls button.active {
+    background-color: #0f2c59;
+    color: white;
+}
+
+/* Default Mobile Grid view falling back to single columns */
+#member-container.grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    padding: 1rem;
+}
+
+#member-container.grid section {
+    border: 1px solid #ccc;
+    padding: 1rem;
+    text-align: center;
+    background-color: #f9f9f9;
+}
+
+#member-container.grid img {
+    max-width: 150px;
+    height: auto;
+}
+
+/* List view structure */
+#member-container.list {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+}
+
+#member-container.list section {
+    border-bottom: 1px solid #ccc;
+    padding: 0.75rem 0;
+    display: block;
+}
+
+#member-container.list img {
+    display: none; /* Hide images in basic list configuration */
+}
+
+footer {
+    background-color: #222;
+    color: white;
+    text-align: center;
+    padding: 1.5rem;
+    margin-top: 2rem;
+}

@@ -1,0 +1,27 @@
+@media (min-width: 640px) {
+    #menu-toggle {
+        display: none; /* Hide hamburger menu on larger displays */
+    }
+
+    #primary-nav ul {
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    #primary-nav li a {
+        border: none;
+    }
+
+    /* Multicolumn Desktop Grid View Setup */
+    #member-container.grid {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    }
+
+    /* Structured Desktop Line Item List Setup */
+    #member-container.list section {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        text-align: left;
+    }
+}
