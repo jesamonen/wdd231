@@ -4,7 +4,7 @@
     "address": "12 Oba Akran Avenue, Ikeja, Lagos",
     "phone": "+234 803 111 2222",
     "website": "https://example.com/elitescreeding",
-    "image": "images/elite-paint.png",
+    "image": "images/elite.png",
     "level": 3,
     "tagline": "Premium wall finishes and architectural coatings."
   },
@@ -13,7 +13,7 @@
     "address": "45 Allen Avenue, Ikeja, Lagos",
     "phone": "+234 802 333 4444",
     "website": "https://example.com/divinestars",
-    "image": "images/divine-stars.png",
+    "image": "images/divine.png",
     "level": 2,
     "tagline": "Nurturing the leaders of tomorrow."
   },
@@ -22,7 +22,7 @@
     "address": "78 Lekki Phase 1, Lagos",
     "phone": "+234 805 555 6666",
     "website": "https://example.com/emonoja-bakes",
-    "image": "images/emonoja-baking.png",
+    "image": "images/emono.png",
     "level": 2,
     "tagline": "Custom cakes, pastries, and artisanal breads."
   },
@@ -31,7 +31,7 @@
     "address": "8 Broad Street, Lagos Island, Lagos",
     "phone": "+234 812 777 8888",
     "website": "https://example.com/cortexmedia",
-    "image": "images/cortex-media.png",
+    "image": "images/cortex.png",
     "level": 1,
     "tagline": "Digital content creation and audio production."
   },
@@ -40,7 +40,7 @@
     "address": "15 Ojota Chemical Market, Ojota, Lagos",
     "phone": "+234 809 999 0000",
     "website": "https://example.com/lagchem",
-    "image": "images/lag.jpg",
+    "image": "images/lag.png",
     "level": 3,
     "tagline": "Top-grade acrylic binders, resins, and extenders."
   },
@@ -49,7 +49,7 @@
     "address": "22 Surulere Way, Surulere, Lagos",
     "phone": "+234 803 444 5555",
     "website": "https://example.com/hopechamps",
-    "image": "images/hopechamps.png",
+    "image": "images/hope.png",
     "level": 1,
     "tagline": "Academic excellence and character development."
   },
@@ -58,7 +58,7 @@
     "address": "31 Victoria Island, Lagos",
     "phone": "+234 806 222 3333",
     "website": "https://example.com/vanguardtech",
-    "image": "images/vanguardtech.png",
+    "image": "images/van.png",
     "level": 3,
     "tagline": "Custom front-end and full-stack development."
   }
