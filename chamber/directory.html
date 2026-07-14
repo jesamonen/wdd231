@@ -5,16 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lagos Chamber of Commerce - Directory</title>
     <meta name="description" content="Business directory page for the Lagos Chamber of Commerce, showcasing local members and businesses.">
-    <!-- FIX: Use full student name to pass character length checks -->
-    <meta name="author" content="Jesse Asuquo Monen">
+    <meta name="author" content="Jesse Monen">
     
     <!-- Favicon -->
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
 
+    <!-- Google Fonts Preconnect and Stylesheet Links -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
     <!-- Facebook Open Graph Meta Tags -->
     <meta property="og:title" content="Lagos Chamber of Commerce - Directory">
     <meta property="og:description" content="Explore and connect with certified businesses and members in the Lagos region.">
-    <meta property="og:image" content="images/logo.png">
+    <!-- Working Absolute URL for Open Graph Image -->
+    <meta property="og:image" content="https://jesamonen.github.io/wdd231/chamber/images/logo.png">
     <meta property="og:url" content="https://jesamonen.github.io/wdd231/chamber/directory.html">
     <meta property="og:type" content="website">
 
@@ -28,7 +33,6 @@
     <header>
         <div class="logo-area">
             <img src="images/logo.png" alt="Lagos Chamber Logo">
-            <!-- Changed to span to avoid duplicate h1 issues and maintain styling -->
             <span class="logo-title">Lagos Chamber of Commerce</span>
         </div>
         <button id="menu-toggle" aria-label="Toggle Menu">&#9776;</button>
@@ -43,7 +47,6 @@
     </header>
 
     <main>
-        <!-- FIX: Single h1 inside the main element matching the page title -->
         <h1>Lagos Chamber of Commerce Directory</h1>
 
         <div class="directory-controls">
