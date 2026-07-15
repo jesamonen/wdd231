@@ -1,27 +1,109 @@
-@media (min-width: 640px) {
-    #menu-toggle {
-        display: none; /* Hide hamburger menu on larger displays */
-    }
+/* ===============================
+   DESKTOP VIEW
+================================ */
 
-    #primary-nav ul {
-        display: flex;
-        justify-content: flex-end;
-    }
+@media screen and (min-width:640px){
 
-    #primary-nav li a {
-        border: none;
-    }
 
-    /* Multicolumn Desktop Grid View Setup */
-    #member-container.grid {
-        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    }
+header {
 
-    /* Structured Desktop Line Item List Setup */
-    #member-container.list section {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        text-align: left;
-    }
+    flex-direction:row;
+    justify-content:space-between;
+    padding:1rem 5%;
+
+}
+
+
+#menu,
+#menu-toggle {
+
+    display:none;
+
+}
+
+
+
+.navigation,
+nav ul {
+
+    display:flex;
+    gap:30px;
+
+}
+
+
+.navigation li,
+nav li {
+
+    margin:0;
+
+}
+
+
+
+/* MAIN */
+
+main {
+
+    max-width:1200px;
+    margin:auto;
+
+}
+
+
+
+/* HERO */
+
+.hero-content {
+
+    left:20%;
+    right:20%;
+
+}
+
+
+
+/* HOME CARDS */
+
+
+.cards {
+
+    grid-template-columns:
+    repeat(3,1fr);
+
+}
+
+
+
+/* DIRECTORY */
+
+.grid {
+
+    grid-template-columns:
+    repeat(3,1fr);
+
+}
+
+
+.member-card {
+
+    min-height:300px;
+
+}
+
+
+
+/* FOOTER */
+
+
+footer {
+
+    display:flex;
+    justify-content:space-around;
+    text-align:left;
+
+}
+
+
+
 }

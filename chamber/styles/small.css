@@ -1,106 +1,298 @@
-/* Core element styles */
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
+/* ===============================
+   GLOBAL STYLES
+================================ */
+
+* {
     box-sizing: border-box;
 }
 
-header {
-    background-color: #0f2c59;
-    color: white;
-    padding: 1rem;
-    position: relative;
+body {
+    font-family: "Roboto", Arial, sans-serif;
+    margin: 0;
+    background: #f4f4f4;
+    color: #333;
 }
 
-#menu-toggle {
-    position: absolute;
-    right: 1rem;
-    top: 1.5rem;
-    font-size: 1.5rem;
-    background: none;
-    border: none;
-    color: white;
-    cursor: pointer;
-}
-
-#primary-nav ul {
-    display: none;
-    list-style: none;
-    padding: 0;
-    margin: 1rem 0 0 0;
-}
-
-#primary-nav.open ul {
-    display: block;
-}
-
-#primary-nav li a {
-    display: block;
-    color: white;
-    padding: 0.75rem;
-    text-decoration: none;
-    border-bottom: 1px solid #1e3d6b;
-}
-
-/* Directory Layout Configurations */
-.directory-controls {
-    text-align: center;
-    margin: 1.5rem 0;
-}
-
-.directory-controls button {
-    padding: 0.5rem 1rem;
-    margin: 0 0.25rem;
-    cursor: pointer;
-}
-
-.directory-controls button.active {
-    background-color: #0f2c59;
-    color: white;
-}
-
-/* Default Mobile Grid view falling back to single columns */
-#member-container.grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
-    padding: 1rem;
-}
-
-#member-container.grid section {
-    border: 1px solid #ccc;
-    padding: 1rem;
-    text-align: center;
-    background-color: #f9f9f9;
-}
-
-#member-container.grid img {
-    max-width: 150px;
+img {
+    max-width: 100%;
     height: auto;
 }
 
-/* List view structure */
-#member-container.list {
+h1, h2 {
+    color: #003366;
+}
+
+
+/* ===============================
+   HEADER
+================================ */
+
+header {
+    background-color: #003366;
+    color: white;
+    padding: 1rem;
     display: flex;
     flex-direction: column;
+    align-items: center;
+}
+
+
+.logo,
+.logo-area {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+
+.logo img,
+.logo-area img {
+    border-radius: 50%;
+}
+
+
+.logo h1,
+.logo-title {
+    color: white;
+    font-size: 1.3rem;
+}
+
+
+/* Menu Button */
+
+#menu,
+#menu-toggle {
+    background: white;
+    color: #003366;
+    border: none;
+    padding: 8px 15px;
+    font-size: 2rem;
+    cursor: pointer;
+    margin: 10px;
+}
+
+
+/* ===============================
+   NAVIGATION
+================================ */
+
+nav {
+    width: 100%;
+}
+
+
+.navigation,
+nav ul {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+}
+
+
+.navigation li,
+nav li {
+    margin: 15px;
+}
+
+
+.navigation a,
+nav a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+
+.navigation a:hover,
+.active {
+    color: #ffcc00;
+}
+
+
+/* ===============================
+   MAIN
+================================ */
+
+main {
     padding: 1rem;
 }
 
-#member-container.list section {
-    border-bottom: 1px solid #ccc;
-    padding: 0.75rem 0;
-    display: block;
+
+main h1 {
+    text-align: center;
 }
 
-#member-container.list img {
-    display: none; /* Hide images in basic list configuration */
+
+/* ===============================
+   HERO SECTION
+================================ */
+
+.hero {
+    position: relative;
 }
+
+
+.hero img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+}
+
+
+.hero-content {
+    position: absolute;
+    top: 20%;
+    left: 5%;
+    right: 5%;
+    background: rgba(0,0,0,0.6);
+    color:white;
+    padding:20px;
+    text-align:center;
+}
+
+
+.hero-content h2 {
+    color:white;
+}
+
+
+.join-btn {
+    display:inline-block;
+    background:#ffcc00;
+    color:#000;
+    padding:12px 25px;
+    text-decoration:none;
+    border-radius:5px;
+    font-weight:bold;
+}
+
+
+/* ===============================
+   HOME CARDS
+================================ */
+
+.cards {
+    display:grid;
+    grid-template-columns:1fr;
+    gap:20px;
+    margin-top:30px;
+}
+
+
+.events,
+.weather,
+.spotlights {
+
+    background:white;
+    padding:20px;
+    border-radius:8px;
+    box-shadow:0 2px 5px rgba(0,0,0,.2);
+}
+
+
+/* ===============================
+   DIRECTORY
+================================ */
+
+.directory-controls {
+    text-align:center;
+    margin:20px;
+}
+
+
+.directory-controls button {
+
+    padding:10px 20px;
+    margin:5px;
+    background:#003366;
+    color:white;
+    border:none;
+    border-radius:5px;
+    cursor:pointer;
+
+}
+
+
+.directory-controls .active,
+.directory-controls button:hover {
+
+    background:#ffcc00;
+    color:black;
+
+}
+
+
+/* Directory Grid */
+
+.grid {
+
+    display:grid;
+    grid-template-columns:1fr;
+    gap:20px;
+
+}
+
+
+.member-card {
+
+    background:white;
+    padding:20px;
+    text-align:center;
+    border-radius:10px;
+    box-shadow:0 2px 5px rgba(0,0,0,.2);
+
+}
+
+
+.member-card img {
+
+    width:150px;
+
+}
+
+
+.member-card h2 {
+
+    color:#003366;
+
+}
+
+
+.list {
+
+    display:block;
+
+}
+
+
+.list .member-card {
+
+    display:flex;
+    gap:20px;
+    text-align:left;
+    margin-bottom:20px;
+
+}
+
+
+
+/* ===============================
+   FOOTER
+================================ */
 
 footer {
-    background-color: #222;
-    color: white;
-    text-align: center;
-    padding: 1.5rem;
-    margin-top: 2rem;
+
+    background:#003366;
+    color:white;
+    padding:20px;
+    text-align:center;
+    margin-top:30px;
+
+}
+
+
+footer p {
+
+    margin:8px;
+
 }
