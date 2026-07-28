@@ -1,0 +1,135 @@
+/* ==========================================
+   GOOGLE FONT IMPORTED IN HTML
+   font-family: 'Roboto', sans-serif;
+   ========================================== */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --primary: #0b6fa4;
+    --secondary: #084f76;
+    --light: #f4f4f4;
+    --dark: #222;
+    --white: #fff;
+    --shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    background: var(--light);
+    color: var(--dark);
+    line-height: 1.6;
+}
+
+/* ===========================
+   HEADER
+=========================== */
+
+header {
+    background: var(--primary);
+    color: var(--white);
+    text-align: center;
+    padding: 1rem;
+}
+
+.site-name {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+/* ===========================
+   NAVIGATION
+=========================== */
+
+nav ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
+
+nav a {
+    display: block;
+    text-decoration: none;
+    color: var(--white);
+    padding: .75rem;
+    border-radius: 5px;
+    transition: background .3s;
+}
+
+nav a:hover,
+nav a:focus,
+nav a.active {
+    background: rgba(255,255,255,.2);
+}
+
+/* ===========================
+   MAIN
+=========================== */
+
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+main h1 {
+    text-align: center;
+    color: var(--primary);
+    margin-bottom: .5rem;
+}
+
+main h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+/* ===========================
+   FOOTER
+=========================== */
+
+footer {
+    margin-top: 3rem;
+    background: var(--primary);
+    color: var(--white);
+    text-align: center;
+    padding: 1rem;
+}
+
+/* ===========================
+   LINKS
+=========================== */
+
+a {
+    color: inherit;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* ===========================
+   BUTTONS
+=========================== */
+
+button,
+input[type="submit"] {
+    font: inherit;
+}
+
+button:focus,
+input:focus,
+textarea:focus,
+select:focus {
+    outline: 2px solid var(--secondary);
+    outline-offset: 2px;
+}
