@@ -37,7 +37,7 @@ export const places = [
     },
     {
         name: "Jhalobia Recreation Park",
-        image: "images/jhalobia.webp",
+        image: "images/jhalobia-park.webp",
         address: "Murtala Muhammed Airport Road, Lagos",
         description: "A beautifully landscaped garden featuring family recreation areas, picnic spots, and botanical displays."
     },
