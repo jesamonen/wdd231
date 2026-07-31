@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Site Plan | Osuwake Paints & Screeding Solutions</title>
+  <meta name="description" content="Site plan document detailing the layout, color scheme, typography, and page structure for Osuwake Paints & Screeding Solutions website project.">
+  <meta name="author" content="Jesse">
+  
+  <!-- Google Fonts Link -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+  
+  <style>
+    /* CSS VARIABLES - Defined using Osuwake Paints Brand Palette */
+    :root {
+      --primary-color: #1b365d;    /* Deep Navy Blue - Represents trust, durability & structure */
+      --secondary-color: #d97706;  /* Warm Amber/Gold - Represents premium paint finishes & craftsmanship */
+      --accent-color: #f1f5f9;     /* Light Slate Grey - Neutral backdrop for wall finishes */
+      --text-color: #1e293b;       /* Charcoal - High-contrast readable body text */
+      --bg-color: #ffffff;         /* Pure white page background */
+
+      --heading-font: 'Montserrat', sans-serif;
+      --body-font: 'Open Sans', sans-serif;
+    }
+
+    /* GLOBAL STYLES */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: var(--body-font);
+      color: var(--text-color);
+      background-color: var(--bg-color);
+      line-height: 1.6;
+      padding: 1.5rem;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    header {
+      background-color: var(--primary-color);
+      color: #ffffff;
+      padding: 2.5rem 2rem;
+      border-radius: 8px;
+      text-align: center;
+      margin-bottom: 2rem;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    header h1 {
+      font-family: var(--heading-font);
+      font-size: 2.4rem;
+      margin-bottom: 0.5rem;
+      letter-spacing: 0.5px;
+    }
+
+    header p {
+      font-size: 1.1rem;
+      color: var(--secondary-color);
+      font-weight: 600;
+    }
+
+    main {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+    }
+
+    section {
+      background-color: #ffffff;
+      border: 1px solid #e2e8f0;
+      border-left: 6px solid var(--primary-color);
+      border-radius: 6px;
+      padding: 1.75rem;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+    }
+
+    h2 {
+      font-family: var(--heading-font);
+      color: var(--primary-color);
+      margin-bottom: 1rem;
+      border-bottom: 2px solid var(--accent-color);
+      padding-bottom: 0.4rem;
+    }
+
+    h3 {
+      font-family: var(--heading-font);
+      color: var(--secondary-color);
+      margin: 1.25rem 0 0.5rem;
+    }
+
+    ul {
+      margin-left: 1.5rem;
+      margin-top: 0.5rem;
+    }
+
+    li {
+      margin-bottom: 0.5rem;
+    }
+
+    code {
+      background-color: var(--accent-color);
+      padding: 0.2rem 0.4rem;
+      border-radius: 4px;
+      font-size: 0.95rem;
+    }
+
+    /* COLOR PALETTE DISPLAY SWATCHES */
+    .color-swatch-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+
+    .swatch {
+      flex: 1 1 200px;
+      padding: 1.25rem;
+      border-radius: 6px;
+      color: #ffffff;
+      font-weight: 600;
+      text-align: center;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+    }
+
+    .swatch-primary {
+      background-color: #1b365d;
+    }
+
+    .swatch-secondary {
+      background-color: #d97706;
+    }
+
+    .swatch-accent {
+      background-color: #f1f5f9;
+      color: #1e293b;
+      border: 1px solid #cbd5e1;
+    }
+
+    /* TYPOGRAPHY SAMPLE BOXES */
+    .font-sample {
+      padding: 1rem;
+      background-color: var(--accent-color);
+      border-radius: 4px;
+      margin-top: 0.5rem;
+      border-left: 4px solid var(--secondary-color);
+    }
+
+    .heading-font-sample {
+      font-family: var(--heading-font);
+      font-weight: 700;
+      font-size: 1.3rem;
+      color: var(--primary-color);
+    }
+
+    .body-font-sample {
+      font-family: var(--body-font);
+      font-size: 1rem;
+      color: var(--text-color);
+    }
+
+    /* WIREFRAME SECTION */
+    .wireframe-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+      margin-top: 1rem;
+    }
+
+    .wireframe-card {
+      border: 2px dashed #cbd5e1;
+      border-radius: 6px;
+      padding: 1rem;
+      text-align: center;
+      background-color: #fafafa;
+    }
+
+    .wireframe-img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #cbd5e1;
+      margin-top: 0.75rem;
+      border-radius: 4px;
+    }
+
+    footer {
+      margin-top: 3rem;
+      text-align: center;
+      font-size: 0.9rem;
+      color: #64748b;
+      padding-top: 1rem;
+      border-top: 1px solid #e2e8f0;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Site Plan: Osuwake Paints & Screeding Solutions</h1>
+    <p>Individual Project Planning Document | WDD 231</p>
+  </header>
+
+  <main>
+    <!-- SITE NAME SECTION -->
+    <section>
+      <h2>Site Name</h2>
+      <p><strong>Proposed Name:</strong> Osuwake Paints & Screeding Solutions</p>
+      <p><strong>Reasoning:</strong> This name carries direct brand equity and clearly defines the core offerings: specialized chemical paint manufacturing, wall preparation (screeding), and professional surface painting services. It establishes instant authority for potential clients seeking structural finishing expertise.</p>
+      <p><strong>Optional Domain Availability:</strong> <code>osuwakepaints.com</code></p>
+    </section>
+
+    <!-- SITE PURPOSE SECTION -->
+    <section>
+      <h2>Site Purpose</h2>
+      <p>The website serves as a primary digital storefront for residential, commercial, and industrial clients. It provides comprehensive details on custom chemical paint formulations (matte, satin, emulsions), professional wall screeding applications, transparent pricing estimates, and visual proofs of past surface-finishing projects alongside easy contact pathways.</p>
+    </section>
+
+    <!-- TARGET AUDIENCE SCENARIOS SECTION -->
+    <section>
+      <h2>Target Audience Scenarios</h2>
+      <ul>
+        <li><strong>Scenario 1:</strong> "What is the difference between wall screeding and standard painting, and how much will it cost to prep and finish my 3-bedroom building?"</li>
+        <li><strong>Scenario 2:</strong> "Does Osuwake Paints manufacture custom paint colors directly, and how can I request a sample or custom color mixing for a commercial project?"</li>
+        <li><strong>Scenario 3:</strong> "Where can I view real photos of completed residential wall screeding projects and contact the team directly for an on-site evaluation?"</li>
+      </ul>
+    </section>
+
+    <!-- COLOR SCHEME SECTION -->
+    <section>
+      <h2>Color Scheme</h2>
+      <p>The selected palette balances professional corporate structure with vibrant creative accents, reflecting precision chemical formulation and high-end decorative finishing. All text combinations strictly meet WCAG AAA contrast guidelines.</p>
+
+      <div class="color-swatch-container">
+        <div class="swatch swatch-primary">
+          Primary: #1B365D<br>(Deep Navy Blue)
+        </div>
+        <div class="swatch swatch-secondary">
+          Secondary: #D97706<br>(Warm Amber / Gold)
+        </div>
+        <div class="swatch swatch-accent">
+          Accent: #F1F5F9<br>(Light Slate / Mist)
+        </div>
+      </div>
+
+      <h3>Color Application Rules</h3>
+      <ul>
+        <li><strong>Primary Color (#1B365D):</strong> Main header backgrounds, primary headings (<code>&lt;h1&gt;</code>, <code>&lt;h2&gt;</code>), navigation bar, and footer base.</li>
+        <li><strong>Secondary Color (#D97706):</strong> Call-to-action buttons, pricing highlights, active navigation links, and subheadings (<code>&lt;h3&gt;</code>).</li>
+        <li><strong>Accent Color (#F1F5F9):</strong> Card section backgrounds, table headers, form field containers, and soft structural dividers.</li>
+        <li><strong>Text Color (#1E293B):</strong> Dark charcoal typography across all light sections to ensure crisp contrast and effortless reading.</li>
+      </ul>
+    </section>
+
+    <!-- TYPOGRAPHY SECTION -->
+    <section>
+      <h2>Typography</h2>
+      <p>Two complementary Google Fonts are used to separate structural headers from descriptive text content.</p>
+
+      <h3>1. Primary Heading Font: Montserrat</h3>
+      <div class="font-sample heading-font-sample">
+        Montserrat — Premium Interior & Exterior Paint Finishes
+      </div>
+      <p><em>Usage:</em> Page headers, section headings (<code>&lt;h1&gt;</code>, <code>&lt;h2&gt;</code>, <code>&lt;h3&gt;</code>), hero banner titles, and navigation links.</p>
+
+      <h3>2. Body Typography: Open Sans</h3>
+      <div class="font-sample body-font-sample">
+        Open Sans — Our custom chemical paint formulations deliver superior opacity, weather protection, and smooth matte or satin wall finishes for long-lasting coverage.
+      </div>
+      <p><em>Usage:</em> Paragraph text, service feature bullet points, contact form fields, testimonial quotes, and footer information.</p>
+    </section>
+
+    <!-- WIREFRAME SECTION -->
+    <section>
+      <h2>Wireframes</h2>
+      <p>Blueprint sketches detailing the responsive layout structure for the Home page across mobile and desktop viewports.</p>
+
+      <div class="wireframe-grid">
+        <div class="wireframe-card">
+          <h3>Small Viewport (Mobile)</h3>
+          <p>Single-column layout with a hamburger navigation menu, vertically stacked service cards, and full-width CTA buttons.</p>
+          <!-- Replace image src with your hand-drawn sketch image file path -->
+          <img src="images/mobile.jpg" alt="Hand-drawn wireframe sketch for mobile viewport" class="wireframe-img">
+        </div>
+
+        <div class="wireframe-card">
+          <h3>Large Viewport (Desktop)</h3>
+          <p>Horizontal header navigation, multi-column grid layout for core services (Paint Production, Screeding, Painting), and split gallery/contact grid.</p>
+          <!-- Replace image src with your hand-drawn sketch image file path -->
+          <img src="images/desktop.jpg" alt="Hand-drawn wireframe sketch for desktop viewport" class="wireframe-img">
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Osuwake Paints & Screeding Solutions Site Plan | WDD 231</p>
+  </footer>
+
+</body>
+</html>
