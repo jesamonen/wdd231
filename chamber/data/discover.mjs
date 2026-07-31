@@ -8,14 +8,14 @@ export const places = [
 
     {
         name: "Nike Art Gallery",
-        image: "images/nike-art-gallery.webp",
+        image: "images/nike.webp",
         address: "2 Elegushi Road, Lekki Phase 1, Lagos",
         description: "A renowned cultural center showcasing thousands of Nigerian artworks, sculptures, and traditional crafts."
     },
 
     {
         name: "National Theatre",
-        image: "images/national-theatre.webp",
+        image: "images/national-art.webp",
         address: "Iganmu, Lagos",
         description: "Nigeria's iconic performing arts venue hosting concerts, exhibitions, theatre productions, and cultural festivals."
     },
