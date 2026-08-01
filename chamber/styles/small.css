@@ -18,7 +18,7 @@ img {
     height: auto;
 }
 
-h1, h2 {
+h1, h2, h3 {
     color: #003366;
 }
 
@@ -246,27 +246,47 @@ main h1 {
     text-align: center;
     border-radius: 10px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    overflow: hidden; /* Prevent text overflow */
 }
 
 .member-card img {
-    width: 150px;
+    max-width: 150px;
+    height: auto;
 }
 
-.member-card h2 {
+.member-card h2,
+.member-card h3 {
     color: #003366;
+    margin: 10px 0;
 }
 
-/* Directory List View */
+/* Prevent links and text from overflowing cards on narrow screens */
+.member-card p,
+.member-card a {
+    word-break: break-word;
+    overflow-wrap: anywhere;
+}
+
+/* Directory List View (Mobile Optimized) */
 
 .list {
-    display: block;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
 }
 
 .list .member-card {
     display: flex;
-    gap: 20px;
-    text-align: left;
-    margin-bottom: 20px;
+    flex-direction: column; /* Stack vertically on small screens */
+    align-items: center;
+    text-align: center;
+    padding: 15px;
+    margin-bottom: 0;
+}
+
+.list .member-card img {
+    margin-bottom: 10px;
 }
 
 /* ===============================
