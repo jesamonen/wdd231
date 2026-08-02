@@ -1,0 +1,157 @@
+/* BASE & ACCESSIBILITY STYLES */
+:root {
+  --primary-color: #1a365d;
+  --secondary-color: #c59b27;
+  --light-bg: #f8fafc;
+  --dark-text: #1e293b;
+  --white: #ffffff;
+  --border-radius: 8px;
+  --font-family: Arial, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-family);
+  color: var(--dark-text);
+  background-color: var(--light-bg);
+  line-height: 1.6;
+}
+
+header {
+  background-color: var(--primary-color);
+  color: var(--white);
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo {
+  font-weight: bold;
+  font-size: 1.3rem;
+  color: var(--white);
+  text-decoration: none;
+}
+
+/* Mobile Nav Menu */
+#hamburger-btn {
+  background: none;
+  border: none;
+  color: var(--white);
+  font-size: 1.8rem;
+  cursor: pointer;
+}
+
+nav {
+  display: none;
+}
+
+nav.open {
+  display: block;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background-color: var(--primary-color);
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+}
+
+nav a {
+  color: var(--white);
+  padding: 1rem;
+  text-decoration: none;
+  display: block;
+}
+
+/* Wayfinding Active Link Class */
+nav a.active {
+  background-color: var(--secondary-color);
+  font-weight: bold;
+}
+
+/* Base Sections & Buttons */
+.hero {
+  text-align: center;
+  padding: 2.5rem 1rem;
+  background-color: #e2e8f0;
+}
+
+.hero img {
+  width: 100%;
+  max-width: 800px;
+  height: auto;
+  border-radius: var(--border-radius);
+}
+
+.btn {
+  display: inline-block;
+  background-color: var(--secondary-color);
+  color: var(--white);
+  padding: 0.75rem 1.5rem;
+  text-decoration: none;
+  border-radius: var(--border-radius);
+  margin-top: 1rem;
+  border: none;
+  cursor: pointer;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  padding: 1.5rem;
+}
+
+.card {
+  background: var(--white);
+  border: 1px solid #cbd5e1;
+  border-radius: var(--border-radius);
+  padding: 1rem;
+}
+
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+/* Modal Dialog */
+dialog {
+  margin: auto;
+  padding: 1.5rem;
+  border-radius: var(--border-radius);
+  border: 1px solid #cbd5e1;
+  max-width: 500px;
+  width: 90%;
+}
+
+dialog::backdrop {
+  background: rgba(0, 0, 0, 0.6);
+}
+
+/* Footer */
+footer {
+  background: var(--primary-color);
+  color: var(--white);
+  padding: 1.5rem;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+footer a {
+  color: var(--secondary-color);
+}
