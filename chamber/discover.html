@@ -7,8 +7,7 @@
     <title>Lagos Chamber of Commerce | Discover</title>
 
     <meta name="description" content="Discover Lagos through attractions, landmarks, culture, and business opportunities with the Lagos Chamber of Commerce.">
-
-    <meta name="author" content="Onen Jesse">
+    <meta name="author" content="Jesam Onen">
 
     <!-- Favicon -->
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
@@ -39,7 +38,6 @@
 <body>
 
 <header>
-
     <div class="logo">
         <img src="images/logo.webp"
              alt="Lagos Chamber Logo"
@@ -56,66 +54,33 @@
     </button>
 
     <nav>
-
         <ul class="navigation">
-
-            <li>
-                <a href="index.html">Home</a>
-            </li>
-
-            <li>
-                <a href="directory.html">Directory</a>
-            </li>
-
-            <li>
-                <a href="join.html">Join</a>
-            </li>
-
-            <li>
-                <a href="discover.html" class="active">Discover</a>
-            </li>
-
+            <li><a href="index.html">Home</a></li>
+            <li><a href="directory.html">Directory</a></li>
+            <li><a href="join.html">Join</a></li>
+            <li><a href="discover.html" class="active">Discover</a></li>
         </ul>
-
     </nav>
-
 </header>
 
 <main class="discover-layout">
 
     <aside class="visitor-message">
-
         <h2>Welcome!</h2>
-
-        <p id="visit-message">
-            Loading visitor information...
-        </p>
-
+        <p id="visit-message">Loading visitor information...</p>
     </aside>
 
     <section class="discover-header">
-
         <h1>Lagos Chamber of Commerce Discover Page</h1>
-
         <p>
             Discover exciting attractions, cultural landmarks,
             business districts, and recreational locations that
             make Lagos one of Africa's leading commercial cities.
         </p>
-
     </section>
 
-    <section class="visitor-message">
-        <h2>Visitor Information</h2>
-        <p id="visit-message"></p>
-    </section>
-
-    <section
-        id="discover-cards"
-        class="discover-grid">
-
+    <section id="discover-cards" class="discover-grid">
         <!-- JavaScript inserts cards here -->
-
     </section>
 
 </main>
@@ -123,56 +88,23 @@
 <footer>
 
     <div class="footer-contact">
-
-        <p>
-            <strong>
-                Lagos Chamber of Commerce
-            </strong>
-        </p>
-
-        <p>
-            12 Oba Akran Avenue,
-            Ikeja, Lagos
-        </p>
-
-        <p>
-            info@lagoschamber.org
-        </p>
-
-        <p>
-            +234 1 234 5678
-        </p>
-
+        <p><strong>Lagos Chamber of Commerce</strong></p>
+        <p>12 Oba Akran Avenue, Ikeja, Lagos</p>
+        <p>info@lagoschamber.org</p>
+        <p>+234 1 234 5678</p>
     </div>
 
     <div class="footer-info">
-
         <p>
-            &copy;
-            <span id="current-year"></span>
-            Lagos Chamber of Commerce
+            &copy; <span id="current-year"></span> Lagos Chamber of Commerce
         </p>
-
+        <p>Jesam Onen | WDD 231</p>
         <p>
-            Onen Jesse | WDD 231
+            Last Modified: <span id="lastModified"></span>
         </p>
-
-        <p>
-            Last Modified:
-            <span id="lastModified"></span>
-        </p>
-
     </div>
 
 </footer>
-
-<script>
-document.getElementById("current-year").textContent =
-new Date().getFullYear();
-
-document.getElementById("lastModified").textContent =
-document.lastModified;
-</script>
 
 </body>
 </html>
