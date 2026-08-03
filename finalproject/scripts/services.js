@@ -10,6 +10,10 @@ import {
     isFavorite
 } from "./storage.js";
 
+import {
+    openModal
+} from "./modal.js";
+
 // ==========================================
 // DOM ELEMENTS
 // ==========================================
@@ -17,10 +21,6 @@ import {
 const serviceContainer = document.querySelector("#serviceContainer");
 const searchInput = document.querySelector("#search");
 const categorySelect = document.querySelector("#category");
-
-const modal = document.querySelector("#serviceModal");
-const modalContent = document.querySelector("#modalContent");
-const closeModal = document.querySelector("#closeModal");
 
 // ==========================================
 // GLOBAL VARIABLES
@@ -55,11 +55,12 @@ function displayServices(serviceList) {
         `;
 
         return;
+
     }
 
     serviceList.forEach(service => {
 
-        const favoriteText = isFavorite(service.id)
+        const favoriteLabel = isFavorite(service.id)
             ? "★ Saved"
             : "☆ Save";
 
@@ -76,25 +77,37 @@ function displayServices(serviceList) {
                 width="300"
                 height="200">
 
-            <h3>${service.name}</h3>
+            <div class="card-content">
 
-            <p><strong>Category:</strong> ${service.category}</p>
+                <h3>${service.name}</h3>
 
-            <p><strong>Price:</strong> ${service.price}</p>
+                <p><strong>Category:</strong> ${service.category}</p>
 
-            <p><strong>Coverage:</strong> ${service.coverage}</p>
+                <p><strong>Price:</strong> ${service.price}</p>
 
-            <button
-                class="detailsBtn"
-                data-id="${service.id}">
-                View Details
-            </button>
+                <p><strong>Coverage:</strong> ${service.coverage}</p>
 
-            <button
-                class="favoriteBtn"
-                data-id="${service.id}">
-                ${favoriteText}
-            </button>
+                <div class="card-buttons">
+
+                    <button
+                        class="detailsBtn"
+                        data-id="${service.id}">
+
+                        View Details
+
+                    </button>
+
+                    <button
+                        class="favoriteBtn"
+                        data-id="${service.id}">
+
+                        ${favoriteLabel}
+
+                    </button>
+
+                </div>
+
+            </div>
 
         `;
 
@@ -102,21 +115,29 @@ function displayServices(serviceList) {
 
     });
 
-    attachEventListeners();
+    addButtonEvents();
 
 }
 
 // ==========================================
-// SEARCH & FILTER
+// SEARCH
 // ==========================================
 
 searchInput.addEventListener("input", filterServices);
 
+// ==========================================
+// CATEGORY FILTER
+// ==========================================
+
 categorySelect.addEventListener("change", filterServices);
+
+// ==========================================
+// FILTER SERVICES
+// ==========================================
 
 function filterServices() {
 
-    const keyword = searchInput.value.toLowerCase();
+    const keyword = searchInput.value.trim().toLowerCase();
 
     const category = categorySelect.value;
 
@@ -141,7 +162,7 @@ function filterServices() {
 // BUTTON EVENTS
 // ==========================================
 
-function attachEventListeners() {
+function addButtonEvents() {
 
     const detailButtons =
         document.querySelectorAll(".detailsBtn");
@@ -182,83 +203,7 @@ function attachEventListeners() {
 }
 
 // ==========================================
-// MODAL
-// ==========================================
-
-function openModal(service) {
-
-    modalContent.innerHTML = `
-
-        <h2>${service.name}</h2>
-
-        <img
-            src="${service.image}"
-            alt="${service.name}"
-            loading="lazy">
-
-        <p>
-
-            <strong>Category:</strong>
-
-            ${service.category}
-
-        </p>
-
-        <p>
-
-            <strong>Price:</strong>
-
-            ${service.price}
-
-        </p>
-
-        <p>
-
-            <strong>Coverage:</strong>
-
-            ${service.coverage}
-
-        </p>
-
-        <p>
-
-            ${service.description}
-
-        </p>
-
-    `;
-
-    modal.showModal();
-
-}
-
-closeModal.addEventListener("click", () => {
-
-    modal.close();
-
-});
-
-modal.addEventListener("click", (event) => {
-
-    const rect = modal.getBoundingClientRect();
-
-    const clickedOutside =
-
-        event.clientX < rect.left ||
-        event.clientX > rect.right ||
-        event.clientY < rect.top ||
-        event.clientY > rect.bottom;
-
-    if (clickedOutside) {
-
-        modal.close();
-
-    }
-
-});
-
-// ==========================================
-// FAVORITES
+// SAVE FAVORITE
 // ==========================================
 
 function saveFavorite(id) {
