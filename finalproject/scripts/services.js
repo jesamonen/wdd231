@@ -5,7 +5,15 @@
 
 import { getServices } from "./fetchData.js";
 
-// DOM Elements
+import {
+    addFavorite,
+    isFavorite
+} from "./storage.js";
+
+// ==========================================
+// DOM ELEMENTS
+// ==========================================
+
 const serviceContainer = document.querySelector("#serviceContainer");
 const searchInput = document.querySelector("#search");
 const categorySelect = document.querySelector("#category");
@@ -14,28 +22,49 @@ const modal = document.querySelector("#serviceModal");
 const modalContent = document.querySelector("#modalContent");
 const closeModal = document.querySelector("#closeModal");
 
-// Local Storage Key
-const STORAGE_KEY = "favoriteServices";
+// ==========================================
+// GLOBAL VARIABLES
+// ==========================================
 
-// Load services when page opens
 let services = [];
 
+// ==========================================
+// INITIALIZE PAGE
+// ==========================================
+
 document.addEventListener("DOMContentLoaded", async () => {
+
     services = await getServices();
+
     displayServices(services);
+
 });
 
 // ==========================================
-// Display Services
+// DISPLAY SERVICES
 // ==========================================
 
 function displayServices(serviceList) {
 
     serviceContainer.innerHTML = "";
 
+    if (serviceList.length === 0) {
+
+        serviceContainer.innerHTML = `
+            <p>No services found.</p>
+        `;
+
+        return;
+    }
+
     serviceList.forEach(service => {
 
+        const favoriteText = isFavorite(service.id)
+            ? "★ Saved"
+            : "☆ Save";
+
         const card = document.createElement("article");
+
         card.classList.add("card");
 
         card.innerHTML = `
@@ -55,12 +84,16 @@ function displayServices(serviceList) {
 
             <p><strong>Coverage:</strong> ${service.coverage}</p>
 
-            <button class="detailsBtn" data-id="${service.id}">
+            <button
+                class="detailsBtn"
+                data-id="${service.id}">
                 View Details
             </button>
 
-            <button class="favoriteBtn" data-id="${service.id}">
-                ★ Save
+            <button
+                class="favoriteBtn"
+                data-id="${service.id}">
+                ${favoriteText}
             </button>
 
         `;
@@ -69,30 +102,17 @@ function displayServices(serviceList) {
 
     });
 
-    activateButtons();
+    attachEventListeners();
+
 }
 
 // ==========================================
-// Search Services
+// SEARCH & FILTER
 // ==========================================
 
-searchInput.addEventListener("input", () => {
+searchInput.addEventListener("input", filterServices);
 
-    filterServices();
-
-});
-
-// ==========================================
-// Filter Category
-// ==========================================
-
-categorySelect.addEventListener("change", () => {
-
-    filterServices();
-
-});
-
-// ==========================================
+categorySelect.addEventListener("change", filterServices);
 
 function filterServices() {
 
@@ -100,7 +120,7 @@ function filterServices() {
 
     const category = categorySelect.value;
 
-    const filtered = services.filter(service => {
+    const filteredServices = services.filter(service => {
 
         const matchesSearch =
             service.name.toLowerCase().includes(keyword);
@@ -113,15 +133,15 @@ function filterServices() {
 
     });
 
-    displayServices(filtered);
+    displayServices(filteredServices);
 
 }
 
 // ==========================================
-// Activate Buttons
+// BUTTON EVENTS
 // ==========================================
 
-function activateButtons() {
+function attachEventListeners() {
 
     const detailButtons =
         document.querySelectorAll(".detailsBtn");
@@ -132,10 +152,13 @@ function activateButtons() {
 
             const id = Number(button.dataset.id);
 
-            const service =
-                services.find(item => item.id === id);
+            const service = services.find(item => item.id === id);
 
-            showModal(service);
+            if (service) {
+
+                openModal(service);
+
+            }
 
         });
 
@@ -148,7 +171,9 @@ function activateButtons() {
 
         button.addEventListener("click", () => {
 
-            saveFavorite(Number(button.dataset.id));
+            const id = Number(button.dataset.id);
+
+            saveFavorite(id);
 
         });
 
@@ -157,10 +182,10 @@ function activateButtons() {
 }
 
 // ==========================================
-// Modal
+// MODAL
 // ==========================================
 
-function showModal(service) {
+function openModal(service) {
 
     modalContent.innerHTML = `
 
@@ -213,30 +238,41 @@ closeModal.addEventListener("click", () => {
 
 });
 
+modal.addEventListener("click", (event) => {
+
+    const rect = modal.getBoundingClientRect();
+
+    const clickedOutside =
+
+        event.clientX < rect.left ||
+        event.clientX > rect.right ||
+        event.clientY < rect.top ||
+        event.clientY > rect.bottom;
+
+    if (clickedOutside) {
+
+        modal.close();
+
+    }
+
+});
+
 // ==========================================
-// Local Storage
+// FAVORITES
 // ==========================================
 
 function saveFavorite(id) {
 
-    let favorites =
-        JSON.parse(localStorage.getItem(STORAGE_KEY)) || [];
+    if (addFavorite(id)) {
 
-    if (!favorites.includes(id)) {
-
-        favorites.push(id);
-
-        localStorage.setItem(
-            STORAGE_KEY,
-            JSON.stringify(favorites)
-        );
-
-        alert("Service saved to favorites.");
+        alert("Service added to your favorites.");
 
     } else {
 
-        alert("Already saved.");
+        alert("This service is already in your favorites.");
 
     }
+
+    displayServices(services);
 
 }
