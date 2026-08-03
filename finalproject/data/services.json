@@ -68,7 +68,7 @@
     "category": "paint",
     "price": "₦45,000 / 20L",
     "description": "Modern textured wall finish.",
-    "image": "images/texture.webp"
+    "image": "images/texcoat.webp"
   },
   {
     "id": 9,
@@ -77,13 +77,13 @@
     "price": "On Request",
     "coverage": "Custom",
     "description": "Professional colour matching and custom paint production.",
-    "image": "images/color-mixing.webp"
+    "image": "images/color.webp"
   },
   {
     "id": 10,
     "name": "putty",
     "category": "Screeding",
-    "price": "₦70,000 / 20L",
+    "price": "₦30,000 / 20L",
     "coverage": "180–220 m²",
     "description": "Give your wall a smooth texture before painting for long-lasting performance.",
     "image": "images/putty.webp"
@@ -97,22 +97,14 @@
     "description": "Durable coating for concrete and industrial floors.",
     "image": "images/vinolux.webp"
   },
-  {
-    "id": 12,
-    "name": "Waterproof Coating",
-    "category": "Protective Coating",
-    "price": "₦9,500 / m²",
-    "coverage": "Per Square Meter",
-    "description": "Waterproof membrane for roofs, walls, and foundations.",
-    "image": "images/waterproof.webp"
-  },
+
 
   {
-    "id": 13,
+    "id": 12,
     "name": "Anti-Mould Paint",
     "category": "Paint",
     "price": "₦75,000 / 20L",
     "description": "Resists mould and mildew in damp environments.",
-    "image": "images/mould.webp"
+    "image": "images/anti-mould.webp"
   }
 ]
