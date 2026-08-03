@@ -1,0 +1,184 @@
+/* ==========================================
+   LARGE SCREEN STYLES
+   Tablets & Desktops (768px and above)
+========================================== */
+
+@media only screen and (min-width: 768px) {
+
+    /* ===============================
+       HEADER
+    =============================== */
+
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem 2rem;
+    }
+
+    /* Hide hamburger button */
+    #menuBtn {
+        display: none;
+    }
+
+    /* Always show navigation */
+    #navMenu {
+        display: block !important;
+        width: auto;
+    }
+
+    nav ul {
+        display: flex;
+        flex-direction: row;
+        gap: 2rem;
+        margin-top: 0;
+    }
+
+    nav li {
+        border: none;
+    }
+
+    nav a {
+        padding: .5rem;
+        transition: color .3s ease;
+    }
+
+    nav a:hover {
+        color: var(--secondary-color);
+        background: transparent;
+    }
+
+    /* ===============================
+       HERO
+    =============================== */
+
+    .hero {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 3rem;
+        align-items: center;
+        padding: 5rem 2rem;
+    }
+
+    .hero-text {
+        order: 1;
+        text-align: left;
+    }
+
+    .hero-image {
+        order: 2;
+    }
+
+    .hero h2 {
+        font-size: 3rem;
+        text-align: left;
+    }
+
+    .hero p {
+        font-size: 1.1rem;
+    }
+
+    /* ===============================
+       ABOUT
+    =============================== */
+
+    .about {
+        padding: 4rem 2rem;
+    }
+
+    .about p {
+        max-width: 900px;
+    }
+
+    /* ===============================
+       FEATURED SERVICES
+    =============================== */
+
+    .cards {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+    }
+
+    .card img {
+        height: 220px;
+        object-fit: cover;
+    }
+
+    /* ===============================
+       WHY CHOOSE US
+    =============================== */
+
+    .why ul {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+
+    /* ===============================
+       TESTIMONIALS
+    =============================== */
+
+    .testimonials {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
+
+    .testimonial {
+        margin: 0;
+    }
+
+    /* ===============================
+       CONTACT FORM
+    =============================== */
+
+    form {
+        max-width: 800px;
+    }
+
+    /* ===============================
+       FOOTER
+    =============================== */
+
+    footer {
+        padding: 2rem;
+    }
+
+    footer p {
+        margin: .8rem 0;
+    }
+}
+
+/* ==========================================
+   EXTRA LARGE SCREENS (1200px+)
+========================================== */
+
+@media only screen and (min-width: 1200px) {
+
+    main {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .hero h2 {
+        font-size: 3.5rem;
+    }
+
+    .hero p {
+        font-size: 1.2rem;
+    }
+
+    .cards {
+        gap: 2.5rem;
+    }
+
+    .card {
+        transition: transform .3s ease, box-shadow .3s ease;
+    }
+
+    .card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    }
+}
