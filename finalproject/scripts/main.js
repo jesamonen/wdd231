@@ -1,68 +1,61 @@
-import { initNavigation } from './modules/navigation.js';
-import { getProjectsData } from './modules/dataFetcher.js';
-import { initModal, openModalWithDetails } from './modules/modal.js';
+// ==========================================
+// main.js
+// Osuwake Paints & Screeding Solutions
+// ==========================================
 
-document.addEventListener('DOMContentLoaded', async () => {
-  initNavigation();
-  initModal();
+// Select Elements
+const menuBtn = document.querySelector("#menuBtn");
+const navMenu = document.querySelector("#navMenu");
 
-  const container = document.querySelector('#gallery-container');
-  const filterSelect = document.querySelector('#filter-select');
+// Toggle Mobile Navigation
+if (menuBtn) {
+    menuBtn.addEventListener("click", () => {
 
-  if (container) {
-    const projects = await getProjectsData();
+        navMenu.classList.toggle("open");
 
-    // Render projects array using template literals
-    const renderItems = (items) => {
-      container.innerHTML = '';
-      
-      // Array Method: forEach
-      items.forEach(item => {
-        const card = document.createElement('div');
-        card.className = 'card';
-        card.innerHTML = `
-          <img src="${item.image}" alt="${item.title}" loading="lazy" width="600" height="400">
-          <h3>${item.title}</h3>
-          <p><strong>Category:</strong> ${item.category}</p>
-          <p><strong>Rating:</strong> ${item.rating}</p>
-          <button class="btn view-details-btn">View Details</button>
-        `;
-
-        card.querySelector('.view-details-btn').addEventListener('click', () => {
-          openModalWithDetails(item);
-        });
-
-        container.appendChild(card);
-      });
-    };
-
-    renderItems(projects);
-
-    // Filter functionality using Array Method: filter
-    if (filterSelect) {
-      filterSelect.addEventListener('change', (e) => {
-        const selectedValue = e.target.value;
-        if (selectedValue === 'all') {
-          renderItems(projects);
+        if (navMenu.classList.contains("open")) {
+            menuBtn.innerHTML = "&times;";
+            menuBtn.setAttribute("aria-label", "Close Navigation Menu");
         } else {
-          const filtered = projects.filter(p => p.category === selectedValue);
-          renderItems(filtered);
+            menuBtn.innerHTML = "&#9776;";
+            menuBtn.setAttribute("aria-label", "Open Navigation Menu");
         }
-      });
-    }
-  }
+    });
+}
 
-  // Local Storage Requirement: Store last visit time
-  const visitDisplay = document.querySelector('#last-visit-msg');
-  if (visitDisplay) {
-    const lastVisit = localStorage.getItem('lastVisit');
-    const now = new Date().toLocaleDateString();
+// ==========================================
+// Highlight Current Navigation Link
+// ==========================================
 
-    if (lastVisit) {
-      visitDisplay.textContent = `Welcome back! Your last visit was on ${lastVisit}.`;
-    } else {
-      visitDisplay.textContent = `Welcome! Thank you for visiting Osuwake Paints for the first time.`;
+const currentPage = window.location.pathname.split("/").pop();
+
+const navLinks = document.querySelectorAll("nav a");
+
+navLinks.forEach(link => {
+
+    const href = link.getAttribute("href");
+
+    if (href === currentPage || (currentPage === "" && href === "index.html")) {
+        link.classList.add("active");
     }
-    localStorage.setItem('lastVisit', now);
-  }
 });
+
+// ==========================================
+// Current Year
+// ==========================================
+
+const yearElement = document.querySelector("#currentYear");
+
+if (yearElement) {
+    yearElement.textContent = new Date().getFullYear();
+}
+
+// ==========================================
+// Last Modified Date
+// ==========================================
+
+const modifiedElement = document.querySelector("#lastModified");
+
+if (modifiedElement) {
+    modifiedElement.textContent = `Last Modified: ${document.lastModified}`;
+}
