@@ -1,18 +1,153 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Submission Received - Osuwake Paints</title>
-  <link rel="stylesheet" href="styles/base.css">
-  <script src="scripts/thank-you.js" defer></script>
+    <!-- Meta Information -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Thank You | Osuwake Paints & Screeding Solutions</title>
+
+    <meta name="description" content="Thank you for contacting Osuwake Paints & Screeding Solutions.">
+    <meta name="author" content="Jesam Onen">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Thank You - Osuwake Paints & Screeding Solutions">
+    <meta property="og:description" content="Your quotation request has been received successfully.">
+    <meta property="og:image" content="images/hero.webp">
+    <meta property="og:type" content="website">
+
+    <link rel="icon" href="favicon.ico">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/large.css">
 </head>
+
 <body>
-  <main style="padding: 2rem; max-width: 600px; margin: 2rem auto; background: white; border-radius: 8px;">
-    <h2>Thank You for Reaching Out!</h2>
-    <p>We have received your details as displayed below:</p>
-    <div id="form-data-display" style="margin: 1.5rem 0;"></div>
-    <a href="index.html" class="btn">Back to Home</a>
-  </main>
+
+<header>
+
+    <div class="logo">
+        <h1>Osuwake Paints</h1>
+    </div>
+
+    <button id="menuBtn" aria-label="Open Navigation">&#9776;</button>
+
+    <nav id="navMenu">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+</header>
+
+<main>
+
+<section class="thank-you">
+
+    <h2>Thank You!</h2>
+
+    <p>
+        Your quotation request has been received successfully.
+        We appreciate your interest in Osuwake Paints & Screeding Solutions.
+    </p>
+
+    <p>
+        One of our representatives will contact you shortly.
+    </p>
+
+</section>
+
+<section class="submission-details">
+
+    <h2>Your Submitted Information</h2>
+
+    <div class="card">
+
+        <p><strong>Full Name:</strong> <span id="fullname"></span></p>
+
+        <p><strong>Email:</strong> <span id="email"></span></p>
+
+        <p><strong>Phone:</strong> <span id="phone"></span></p>
+
+        <p><strong>Selected Service:</strong> <span id="service"></span></p>
+
+        <p><strong>Project Location:</strong> <span id="location"></span></p>
+
+        <p><strong>Estimated Budget:</strong> <span id="budget"></span></p>
+
+        <p><strong>Project Description:</strong></p>
+
+        <p id="message"></p>
+
+    </div>
+
+</section>
+
+<section class="cta">
+
+    <a href="index.html" class="btn">Return to Home</a>
+
+</section>
+
+</main>
+
+<footer>
+
+    <p>
+        &copy; <span id="currentYear"></span>
+        Osuwake Paints & Screeding Solutions
+    </p>
+
+    <p id="lastModified"></p>
+
+    <p>
+        <a href="attributions.html">Attributions</a>
+    </p>
+
+    <p>
+        <a href="#">Project Demonstration Video</a>
+    </p>
+
+</footer>
+
+<!-- Main JavaScript -->
+<script type="module" src="js/main.js"></script>
+
+<!-- Display Submitted Form Data -->
+<script>
+const params = new URLSearchParams(window.location.search);
+
+document.getElementById("fullname").textContent =
+    params.get("fullname") || "Not Provided";
+
+document.getElementById("email").textContent =
+    params.get("email") || "Not Provided";
+
+document.getElementById("phone").textContent =
+    params.get("phone") || "Not Provided";
+
+document.getElementById("service").textContent =
+    params.get("service") || "Not Provided";
+
+document.getElementById("location").textContent =
+    params.get("location") || "Not Provided";
+
+document.getElementById("budget").textContent =
+    params.get("budget") || "Not Provided";
+
+document.getElementById("message").textContent =
+    params.get("message") || "Not Provided";
+</script>
+
 </body>
 </html>
