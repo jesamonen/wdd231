@@ -12,7 +12,7 @@
     "id": 2,
     "name": "Matte Emulsion Paint",
     "category": "Paint",
-    "price": "₦45,000 / 20L",
+    "price": "₦50,000 / 20L",
     "coverage": "170–200 m²",
     "description": "Smooth matte finish with excellent coverage and durability.",
     "image": "images/matte.webp"
@@ -21,7 +21,7 @@
     "id": 3,
     "name": "Premium Emulsion Paint",
     "category": "Paint",
-    "price": "₦55,000 / 20L",
+    "price": "₦40,000 / 20L",
     "coverage": "180–210 m²",
     "description": "Premium interior wall paint with superior hiding power.",
     "image": "images/emulsion.webp"
@@ -55,20 +55,20 @@
   },
   {
     "id": 7,
-    "name": "POP Screeding",
-    "category": "Screeding",
-    "price": "₦4,500 / m²",
-    "coverage": "Per Square Meter",
-    "description": "Premium plaster finish for interior walls and ceilings.",
-    "image": "images/pop.webp"
+    "name": "silk paint",
+    "category": "paint",
+    "price": "₦70,000 / 20L",
+    "coverage": "180–220 m²",
+    "description": "Premium silk finish for interior walls and ceilings.",
+    "image": "images/silk.webp"
   },
   {
     "id": 8,
-    "name": "Decorative Texture Finish",
-    "category": "Decorative",
+    "name": "Texcoat",
+    "category": "paint",
     "price": "₦6,500 / m²",
     "coverage": "Per Square Meter",
-    "description": "Modern decorative textured wall finish.",
+    "description": "Modern textured wall finish.",
     "image": "images/texture.webp"
   },
   {
@@ -82,21 +82,21 @@
   },
   {
     "id": 10,
-    "name": "Roof Paint",
-    "category": "Exterior Paint",
+    "name": "putty",
+    "category": "Screeding",
     "price": "₦70,000 / 20L",
     "coverage": "180–220 m²",
-    "description": "Protective roof coating for long-lasting performance.",
-    "image": "images/roof.webp"
+    "description": "Give your wall a smooth texture before painting for long-lasting performance.",
+    "image": "images/putty.webp"
   },
   {
     "id": 11,
-    "name": "Floor Coating",
-    "category": "Protective Coating",
-    "price": "₦8,000 / m²",
+    "name": "lux",
+    "category": "paint",
+    "price": "₦80,000 / 20L",
     "coverage": "Per Square Meter",
     "description": "Durable coating for concrete and industrial floors.",
-    "image": "images/floor.webp"
+    "image": "images/vinolux.webp"
   },
   {
     "id": 12,
@@ -107,31 +107,13 @@
     "description": "Waterproof membrane for roofs, walls, and foundations.",
     "image": "images/waterproof.webp"
   },
+
   {
     "id": 13,
-    "name": "Wood Finish Paint",
-    "category": "Wood Finish",
-    "price": "₦65,000 / 20L",
-    "coverage": "160–190 m²",
-    "description": "Protective finish for doors, furniture, and wooden surfaces.",
-    "image": "images/wood.webp"
-  },
-  {
-    "id": 14,
     "name": "Anti-Mould Paint",
     "category": "Paint",
-    "price": "₦68,000 / 20L",
-    "coverage": "180–210 m²",
+    "price": "₦75,000 / 20L",
     "description": "Resists mould and mildew in damp environments.",
     "image": "images/mould.webp"
-  },
-  {
-    "id": 15,
-    "name": "Industrial Protective Paint",
-    "category": "Industrial",
-    "price": "₦120,000 / 20L",
-    "coverage": "170–200 m²",
-    "description": "Heavy-duty protective coating for factories and warehouses.",
-    "image": "images/industrial.webp"
   }
 ]
