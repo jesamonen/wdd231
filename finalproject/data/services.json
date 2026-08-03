@@ -1,0 +1,137 @@
+[
+  {
+    "id": 1,
+    "name": "Premium Satin Paint",
+    "category": "Paint",
+    "price": "₦80,000 / 20L",
+    "coverage": "180–220 m²",
+    "description": "High-quality satin finish suitable for residential and commercial interiors.",
+    "image": "images/satin.webp"
+  },
+  {
+    "id": 2,
+    "name": "Matte Emulsion Paint",
+    "category": "Paint",
+    "price": "₦45,000 / 20L",
+    "coverage": "170–200 m²",
+    "description": "Smooth matte finish with excellent coverage and durability.",
+    "image": "images/matte.webp"
+  },
+  {
+    "id": 3,
+    "name": "Premium Emulsion Paint",
+    "category": "Paint",
+    "price": "₦55,000 / 20L",
+    "coverage": "180–210 m²",
+    "description": "Premium interior wall paint with superior hiding power.",
+    "image": "images/emulsion.webp"
+  },
+  {
+    "id": 4,
+    "name": "Exterior Weather Shield",
+    "category": "Exterior Paint",
+    "price": "₦95,000 / 20L",
+    "coverage": "170–200 m²",
+    "description": "Weather-resistant exterior paint with UV protection.",
+    "image": "images/exterior.webp"
+  },
+  {
+    "id": 5,
+    "name": "Acrylic Wall Primer",
+    "category": "Primer",
+    "price": "₦35,000 / 20L",
+    "coverage": "200–240 m²",
+    "description": "Improves paint adhesion and enhances durability.",
+    "image": "images/primer.webp"
+  },
+  {
+    "id": 6,
+    "name": "Wall Screeding",
+    "category": "Screeding",
+    "price": "₦3,500 / m²",
+    "coverage": "Per Square Meter",
+    "description": "Professional wall leveling for smooth painting surfaces.",
+    "image": "images/screeding.webp"
+  },
+  {
+    "id": 7,
+    "name": "POP Screeding",
+    "category": "Screeding",
+    "price": "₦4,500 / m²",
+    "coverage": "Per Square Meter",
+    "description": "Premium plaster finish for interior walls and ceilings.",
+    "image": "images/pop.webp"
+  },
+  {
+    "id": 8,
+    "name": "Decorative Texture Finish",
+    "category": "Decorative",
+    "price": "₦6,500 / m²",
+    "coverage": "Per Square Meter",
+    "description": "Modern decorative textured wall finish.",
+    "image": "images/texture.webp"
+  },
+  {
+    "id": 9,
+    "name": "Custom Colour Mixing",
+    "category": "Paint",
+    "price": "On Request",
+    "coverage": "Custom",
+    "description": "Professional colour matching and custom paint production.",
+    "image": "images/color-mixing.webp"
+  },
+  {
+    "id": 10,
+    "name": "Roof Paint",
+    "category": "Exterior Paint",
+    "price": "₦70,000 / 20L",
+    "coverage": "180–220 m²",
+    "description": "Protective roof coating for long-lasting performance.",
+    "image": "images/roof.webp"
+  },
+  {
+    "id": 11,
+    "name": "Floor Coating",
+    "category": "Protective Coating",
+    "price": "₦8,000 / m²",
+    "coverage": "Per Square Meter",
+    "description": "Durable coating for concrete and industrial floors.",
+    "image": "images/floor.webp"
+  },
+  {
+    "id": 12,
+    "name": "Waterproof Coating",
+    "category": "Protective Coating",
+    "price": "₦9,500 / m²",
+    "coverage": "Per Square Meter",
+    "description": "Waterproof membrane for roofs, walls, and foundations.",
+    "image": "images/waterproof.webp"
+  },
+  {
+    "id": 13,
+    "name": "Wood Finish Paint",
+    "category": "Wood Finish",
+    "price": "₦65,000 / 20L",
+    "coverage": "160–190 m²",
+    "description": "Protective finish for doors, furniture, and wooden surfaces.",
+    "image": "images/wood.webp"
+  },
+  {
+    "id": 14,
+    "name": "Anti-Mould Paint",
+    "category": "Paint",
+    "price": "₦68,000 / 20L",
+    "coverage": "180–210 m²",
+    "description": "Resists mould and mildew in damp environments.",
+    "image": "images/mould.webp"
+  },
+  {
+    "id": 15,
+    "name": "Industrial Protective Paint",
+    "category": "Industrial",
+    "price": "₦120,000 / 20L",
+    "coverage": "170–200 m²",
+    "description": "Heavy-duty protective coating for factories and warehouses.",
+    "image": "images/industrial.webp"
+  }
+]
