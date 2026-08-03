@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Basic Meta -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Contact Us | Osuwake Paints & Screeding Solutions</title>
+
+    <meta name="description"
+        content="Request a free quotation for painting, screeding, and custom paint production services.">
+
+    <meta name="author" content="Jesse Onen">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Contact Osuwake Paints & Screeding Solutions">
+    <meta property="og:description"
+        content="Request a quote for professional painting and screeding services.">
+    <meta property="og:image" content="images/hero.webp">
+    <meta property="og:type" content="website">
+
+    <link rel="icon" href="favicon.ico">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/small.css">
+    <link rel="stylesheet" href="css/large.css">
+</head>
+
+<body>
+
+<header>
+
+    <div class="logo">
+        <h1>Osuwake Paints</h1>
+    </div>
+
+    <button id="menuBtn" aria-label="Open Navigation">&#9776;</button>
+
+    <nav id="navMenu">
+
+        <ul>
+
+            <li><a href="index.html">Home</a></li>
+
+            <li><a href="services.html">Services</a></li>
+
+            <li><a href="contact.html" class="active">Contact</a></li>
+
+        </ul>
+
+    </nav>
+
+</header>
+
+<main>
+
+<section>
+
+<h2>Request a Free Quote</h2>
+
+<p>
+
+Complete the form below and our team will contact you as soon as possible.
+
+</p>
+
+</section>
+
+<section>
+
+<form action="thankyou.html" method="get">
+
+<label for="fullname">Full Name *</label>
+
+<input
+type="text"
+id="fullname"
+name="fullname"
+required>
+
+<label for="email">Email Address *</label>
+
+<input
+type="email"
+id="email"
+name="email"
+required>
+
+<label for="phone">Phone Number *</label>
+
+<input
+type="tel"
+id="phone"
+name="phone"
+required>
+
+<label for="service">Select Service *</label>
+
+<select
+id="service"
+name="service"
+required>
+
+<option value="">Choose a Service</option>
+
+<option>Premium Satin Paint</option>
+
+<option>Matte Emulsion Paint</option>
+
+<option>Exterior Weather Shield</option>
+
+<option>Wall Screeding</option>
+
+<option>POP Screeding</option>
+
+<option>Decorative Texture Finish</option>
+
+<option>Waterproof Coating</option>
+
+<option>Custom Colour Mixing</option>
+
+</select>
+
+<label for="location">Project Location *</label>
+
+<input
+type="text"
+id="location"
+name="location"
+required>
+
+<label for="budget">Estimated Budget</label>
+
+<input
+type="text"
+id="budget"
+name="budget"
+placeholder="₦">
+
+<label for="message">Project Description *</label>
+
+<textarea
+id="message"
+name="message"
+required
+placeholder="Tell us about your project..."></textarea>
+
+<input
+type="submit"
+value="Request Quote"
+class="btn">
+
+</form>
+
+</section>
+
+<section>
+
+<h2>Contact Information</h2>
+
+<p><strong>Business Name:</strong> Osuwake Paints & Screeding Solutions</p>
+
+<p><strong>Email:</strong> info@osuwakepaints.com</p>
+
+<p><strong>Phone:</strong> +234 XXX XXX XXXX</p>
+
+<p><strong>Address:</strong> Lagos, Nigeria</p>
+
+<p><strong>Business Hours:</strong></p>
+
+<ul>
+
+<li>Monday – Friday: 8:00 AM – 6:00 PM</li>
+
+<li>Saturday: 9:00 AM – 3:00 PM</li>
+
+<li>Sunday: Closed</li>
+
+</ul>
+
+</section>
+
+</main>
+
+<footer>
+
+<p>&copy; <span id="currentYear"></span> Osuwake Paints & Screeding Solutions</p>
+
+<p id="lastModified"></p>
+
+<p><a href="attributions.html">Attributions</a></p>
+
+<p><a href="#">Project Demonstration Video</a></p>
+
+</footer>
+
+<script type="module" src="js/main.js"></script>
+
+</body>
+
+</html>
