@@ -4,7 +4,6 @@
     "name": "Premium Satin Paint",
     "category": "Paint",
     "price": "₦80,000 / 20L",
-    "coverage": "180–220 m²",
     "description": "High-quality satin finish suitable for residential and commercial interiors.",
     "image": "images/satin.webp"
   },
@@ -13,7 +12,6 @@
     "name": "Matte Emulsion Paint",
     "category": "Paint",
     "price": "₦50,000 / 20L",
-    "coverage": "170–200 m²",
     "description": "Smooth matte finish with excellent coverage and durability.",
     "image": "images/matte.webp"
   },
@@ -22,7 +20,6 @@
     "name": "Premium Emulsion Paint",
     "category": "Paint",
     "price": "₦40,000 / 20L",
-    "coverage": "180–210 m²",
     "description": "Premium interior wall paint with superior hiding power.",
     "image": "images/emulsion.webp"
   },
@@ -31,7 +28,6 @@
     "name": "Exterior Weather Shield",
     "category": "Exterior Paint",
     "price": "₦95,000 / 20L",
-    "coverage": "170–200 m²",
     "description": "Weather-resistant exterior paint with UV protection.",
     "image": "images/weather.webp"
   },
@@ -40,7 +36,6 @@
     "name": "Acrylic Wall Primer",
     "category": "Primer",
     "price": "₦35,000 / 20L",
-    "coverage": "200–240 m²",
     "description": "Improves paint adhesion and enhances durability.",
     "image": "images/primer.webp"
   },
@@ -49,7 +44,6 @@
     "name": "Wall Screeding",
     "category": "Screeding",
     "price": "₦3,500 / m²",
-    "coverage": "Per Square Meter",
     "description": "Professional wall leveling for smooth painting surfaces.",
     "image": "images/screeding.webp"
   },
@@ -58,7 +52,6 @@
     "name": "silk paint",
     "category": "paint",
     "price": "₦70,000 / 20L",
-    "coverage": "180–220 m²",
     "description": "Premium silk finish for interior walls and ceilings.",
     "image": "images/silk.webp"
   },
