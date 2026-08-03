@@ -1,54 +1,174 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Services - Osuwake Paints & Screeding Solutions</title>
-  <meta name="description" content="Explore our specialized services including paint production, high-grade wall screeding, and interior and exterior residential/commercial painting.">
-  <meta name="author" content="Osuwake Paints">
+    <!-- Basic Meta -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <link rel="icon" href="https://picsum.photos/id/1068/32/32" type="image/x-icon">
-  <link rel="stylesheet" href="styles/base.css">
-  <link rel="stylesheet" href="styles/layout.css">
-  <script type="module" src="scripts/main.js"></script>
+    <title>Our Services | Osuwake Paints & Screeding Solutions</title>
+
+    <meta name="description"
+        content="Browse our professional painting, screeding, and custom paint manufacturing services.">
+
+    <meta name="author" content="Jesse Onen">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Osuwake Paints & Screeding Solutions">
+    <meta property="og:description"
+        content="Professional Painting, Screeding and Paint Manufacturing Services.">
+    <meta property="og:image" content="images/hero.webp">
+    <meta property="og:type" content="website">
+
+    <link rel="icon" href="favicon.ico">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/small.css">
+    <link rel="stylesheet" href="css/large.css">
 </head>
+
 <body>
 
-  <header>
-    <a href="index.html" class="logo">Osuwake Paints</a>
-    <button id="hamburger-btn" aria-label="Toggle Navigation">&#9776;</button>
-    <nav id="primary-nav">
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="services.html">Services</a></li>
-        <li><a href="gallery.html">Gallery/Contact</a></li>
-      </ul>
-    </nav>
-  </header>
+<header>
 
-  <main style="padding: 1.5rem; max-width: 1000px; margin: 0 auto;">
-    <h2>Our Core Services</h2>
-    <br>
-    <div class="card-grid">
-      <div class="card">
-        <h3>1. Custom Paint Production</h3>
-        <p>We produce emulsion, satin, and textured paints using durable raw materials tailored to your project requirements.</p>
-      </div>
-      <div class="card">
-        <h3>2. Wall Screeding</h3>
-        <p>Expert application of screed materials ensuring flat, crack-free, and smooth walls prior to topcoat painting.</p>
-      </div>
-      <div class="card">
-        <h3>3. Residential & Commercial Painting</h3>
-        <p>Full-scale wall painting with precision edge masking, clean application, and premium color choices.</p>
-      </div>
+    <div class="logo">
+        <h1>Osuwake Paints</h1>
     </div>
-  </main>
 
-  <footer>
-    <p><a href="attributions.html">Attributions</a> | <a href="https://youtube.com" target="_blank">Video Demonstration Link</a></p>
-    <p>&copy; 2026 Osuwake Paints & Screeding Solution.</p>
-  </footer>
+    <button id="menuBtn">&#9776;</button>
+
+    <nav id="navMenu">
+
+        <ul>
+
+            <li><a href="index.html">Home</a></li>
+
+            <li><a href="services.html" class="active">Services</a></li>
+
+            <li><a href="contact.html">Contact</a></li>
+
+        </ul>
+
+    </nav>
+
+</header>
+
+<main>
+
+<section>
+
+<h2>Our Products & Services</h2>
+
+<p>
+
+Browse our premium paints, wall screeding services,
+decorative finishes and protective coatings.
+
+</p>
+
+</section>
+
+<!-- Search -->
+
+<section class="search-section">
+
+<input
+type="search"
+id="search"
+placeholder="Search services...">
+
+<select id="category">
+
+<option value="all">All Categories</option>
+
+<option value="Paint">Paint</option>
+
+<option value="Exterior Paint">Exterior Paint</option>
+
+<option value="Primer">Primer</option>
+
+<option value="Screeding">Screeding</option>
+
+<option value="Decorative">Decorative</option>
+
+<option value="Protective Coating">Protective Coating</option>
+
+<option value="Wood Finish">Wood Finish</option>
+
+<option value="Industrial">Industrial</option>
+
+</select>
+
+</section>
+
+<!-- Dynamic Cards -->
+
+<section>
+
+<div id="serviceContainer" class="cards">
+
+<!-- JavaScript inserts cards here -->
+
+</div>
+
+</section>
+
+</main>
+
+<!-- Accessible Modal -->
+
+<dialog id="serviceModal">
+
+<div id="modalContent">
+
+</div>
+
+<button id="closeModal">
+
+Close
+
+</button>
+
+</dialog>
+
+<footer>
+
+<p>&copy; <span id="currentYear"></span> Osuwake Paints & Screeding Solutions</p>
+
+<p id="lastModified"></p>
+
+<p>
+
+<a href="attributions.html">
+
+Attributions
+
+</a>
+
+</p>
+
+<p>
+
+<a href="#">
+
+Project Demonstration Video
+
+</a>
+
+</p>
+
+</footer>
+
+<script type="module" src="js/main.js"></script>
+
+<script type="module" src="js/services.js"></script>
 
 </body>
+
 </html>
