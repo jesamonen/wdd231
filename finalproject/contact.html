@@ -31,7 +31,6 @@
     <link rel="stylesheet" href="styles/base.css">
     <link rel="stylesheet" href="styles/small.css">
     <link rel="stylesheet" href="styles/large.css">
-    
 </head>
 
 <body>
@@ -39,7 +38,7 @@
 <header>
 
     <div class="logo">
-        <h1>Osuwake Paints</h1>
+        <span class="logo-title">Osuwake Paints</span>
     </div>
 
     <button id="menuBtn" aria-label="Open Navigation">&#9776;</button>
@@ -64,12 +63,12 @@
 
 <section>
 
+<h1>Contact Us</h1>
+
 <h2>Request a Free Quote</h2>
 
 <p>
-
 Complete the form below and our team will contact you as soon as possible.
-
 </p>
 
 </section>
@@ -84,7 +83,13 @@ Complete the form below and our team will contact you as soon as possible.
 type="text"
 id="fullname"
 name="fullname"
-required>
+required
+minlength="2"
+maxlength="60"
+pattern="[A-Za-z\s\-']+"
+title="Please enter a valid full name containing only letters, spaces, hyphens, or apostrophes."
+placeholder="e.g., Jesse Onen"
+autocomplete="name">
 
 <label for="email">Email Address *</label>
 
@@ -92,7 +97,11 @@ required>
 type="email"
 id="email"
 name="email"
-required>
+required
+pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$"
+title="Please enter a valid email address (e.g., user@domain.com)."
+placeholder="e.g., name@example.com"
+autocomplete="email">
 
 <label for="phone">Phone Number *</label>
 
@@ -100,7 +109,11 @@ required>
 type="tel"
 id="phone"
 name="phone"
-required>
+required
+pattern="[\+]?[0-9\s\-]{10,15}"
+title="Please enter a valid phone number (e.g., +234 7039 842 879 or 07039842879)."
+placeholder="e.g., +234 703 984 2879"
+autocomplete="tel">
 
 <label for="service">Select Service *</label>
 
@@ -111,21 +124,21 @@ required>
 
 <option value="">Choose a Service</option>
 
-<option>Premium Satin Paint</option>
+<option value="satin">Premium Satin Paint</option>
 
-<option>Matte Emulsion Paint</option>
+<option value="emulsion">Matte Emulsion Paint</option>
 
-<option>Exterior Weather Shield</option>
+<option value="exterior">Exterior Weather Shield</option>
 
-<option>Wall Screeding</option>
+<option value="wall-screeding">Wall Screeding</option>
 
-<option>POP Screeding</option>
+<option value="pop-screeding">POP Screeding</option>
 
-<option>Decorative Texture Finish</option>
+<option value="texture">Decorative Texture Finish</option>
 
-<option>Waterproof Coating</option>
+<option value="waterproof">Waterproof Coating</option>
 
-<option>Custom Colour Mixing</option>
+<option value="custom-mixing">Custom Colour Mixing</option>
 
 </select>
 
@@ -135,15 +148,23 @@ required>
 type="text"
 id="location"
 name="location"
-required>
+required
+minlength="3"
+maxlength="100"
+title="Please enter a valid project location or city."
+placeholder="e.g., Ikeja, Lagos"
+autocomplete="street-address">
 
-<label for="budget">Estimated Budget</label>
+<label for="budget">Estimated Budget (₦)</label>
 
 <input
-type="text"
+type="number"
 id="budget"
 name="budget"
-placeholder="₦">
+min="0"
+step="1000"
+placeholder="e.g., 100000"
+title="Please enter an estimated numerical budget.">
 
 <label for="message">Project Description *</label>
 
@@ -151,7 +172,9 @@ placeholder="₦">
 id="message"
 name="message"
 required
-placeholder="Tell us about your project..."></textarea>
+minlength="10"
+maxlength="1000"
+placeholder="Tell us about your project (e.g., room sizes, timeline, specific color preferences)..."></textarea>
 
 <input
 type="submit"
