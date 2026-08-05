@@ -1,12 +1,12 @@
 /* ==========================================
-   LARGE SCREEN STYLES
+   LARGE SCREEN STYLES (large.css)
    Tablets & Desktops (768px and above)
 ========================================== */
 
 @media only screen and (min-width: 768px) {
 
     /* ===============================
-       HEADER
+       HEADER & NAVIGATION
     =============================== */
 
     header {
@@ -16,12 +16,12 @@
         padding: 1rem 2rem;
     }
 
-    /* Hide hamburger button */
+    /* Hide hamburger button on tablet and desktop */
     #menuBtn {
         display: none;
     }
 
-    /* Always show navigation */
+    /* Always display navigation menu horizontally */
     #navMenu {
         display: block !important;
         width: auto;
@@ -39,8 +39,8 @@
     }
 
     nav a {
-        padding: .5rem;
-        transition: color .3s ease;
+        padding: 0.5rem;
+        transition: color 0.3s ease;
     }
 
     nav a:hover {
@@ -49,7 +49,7 @@
     }
 
     /* ===============================
-       HERO
+       HERO SECTION
     =============================== */
 
     .hero {
@@ -69,17 +69,17 @@
         order: 2;
     }
 
-  .hero h1 {
-    font-size: 3rem;
-    text-align: left;
-}
+    .hero h1 {
+        font-size: 3rem;
+        text-align: left;
+    }
 
     .hero p {
         font-size: 1.1rem;
     }
 
     /* ===============================
-       ABOUT
+       ABOUT SECTION
     =============================== */
 
     .about {
@@ -88,6 +88,7 @@
 
     .about p {
         max-width: 900px;
+        margin: 0 auto;
     }
 
     /* ===============================
@@ -130,28 +131,25 @@
     }
 
     /* ===============================
-       CONTACT FORM
+       CONTACT FORM & FOOTER
     =============================== */
 
     form {
         max-width: 800px;
+        margin: 0 auto;
     }
-
-    /* ===============================
-       FOOTER
-    =============================== */
 
     footer {
         padding: 2rem;
     }
 
     footer p {
-        margin: .8rem 0;
+        margin: 0.8rem 0;
     }
 }
 
 /* ==========================================
-   EXTRA LARGE SCREENS (1200px+)
+   EXTRA LARGE SCREENS (1200px and above)
 ========================================== */
 
 @media only screen and (min-width: 1200px) {
@@ -161,24 +159,11 @@
         margin: 0 auto;
     }
 
+    .hero {
+        padding: 6rem 0;
+    }
+
     .hero h1 {
         font-size: 3.5rem;
-    }
-
-    .hero p {
-        font-size: 1.2rem;
-    }
-
-    .cards {
-        gap: 2.5rem;
-    }
-
-    .card {
-        transition: transform .3s ease, box-shadow .3s ease;
-    }
-
-    .card:hover {
-        transform: translateY(-10px);
-        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
     }
 }
