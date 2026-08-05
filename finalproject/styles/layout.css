@@ -1,31 +1,291 @@
-/* RESPONSIVE LAYOUT BREAKPOINTS */
-@media screen and (min-width: 768px) {
-  #hamburger-btn {
-    display: none;
-  }
+/* ==========================================
+   DEFAULT / MOBILE-FIRST STYLES (Small Screens)
+   Applies to mobile devices by default
+========================================== */
 
-  nav {
-    display: block !important;
-    position: static;
-  }
+/* ===============================
+   HEADER & NAVIGATION
+=============================== */
 
-  nav ul {
-    flex-direction: row;
-  }
-
-  nav a {
-    padding: 0.5rem 1rem;
-  }
-
-  .card-grid {
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  }
-
-  .footer-content {
+header {
     display: flex;
     justify-content: space-between;
-    text-align: left;
-    max-width: 1200px;
+    align-items: center;
+    padding: 1rem;
+    position: relative;
+}
+
+/* Show hamburger button by default on mobile */
+#menuBtn {
+    display: block;
+    background: transparent;
+    border: none;
+    font-size: 1.8rem;
+    cursor: pointer;
+    color: inherit;
+}
+
+/* Hide navigation drawer by default on mobile */
+#navMenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: var(--primary-color, #ffffff);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+/* JavaScript toggle class to open menu on mobile */
+#navMenu.open {
+    display: block;
+}
+
+nav ul {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    margin-top: 0;
+    padding: 0;
+    list-style: none;
+}
+
+nav li {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+nav a {
+    display: block;
+    padding: 0.8rem 1rem;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+nav a:hover {
+    color: var(--secondary-color-bright, #FBBF24);
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+/* ===============================
+   HERO SECTION (Stacked on Mobile)
+=============================== */
+
+.hero {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: center;
+    padding: 2rem 1rem;
+}
+
+.hero-text {
+    order: 1;
+    text-align: center;
+}
+
+.hero-image {
+    order: 2;
+    width: 100%;
+}
+
+.hero h1 {
+    font-size: 2rem;
+    text-align: center;
+}
+
+.hero p {
+    font-size: 1rem;
+}
+
+/* ===============================
+   SECTIONS & CONTENT (Mobile 1-Column)
+=============================== */
+
+.about {
+    padding: 2rem 1rem;
+}
+
+.about p {
+    width: 100%;
     margin: 0 auto;
-  }
+}
+
+.cards {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.why ul {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.testimonials {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.testimonial {
+    margin: 0 0 1rem 0;
+}
+
+/* ===============================
+   CONTACT FORM & FOOTER
+=============================== */
+
+form {
+    width: 100%;
+    padding: 0 1rem;
+}
+
+footer {
+    padding: 1.5rem 1rem;
+    text-align: center;
+}
+
+footer p {
+    margin: 0.5rem 0;
+}
+
+
+/* ==========================================
+   TABLET & DESKTOP SCREENS (768px and above)
+========================================== */
+
+@media only screen and (min-width: 768px) {
+
+    /* Header & Navigation Adjustments */
+    header {
+        padding: 1rem 2rem;
+    }
+
+    #menuBtn {
+        display: none; /* Hide hamburger menu on larger screens */
+    }
+
+    #navMenu {
+        display: block !important; /* Restore normal inline navigation */
+        position: static;
+        width: auto;
+        background-color: transparent;
+        box-shadow: none;
+    }
+
+    nav ul {
+        flex-direction: row;
+        gap: 2rem;
+    }
+
+    nav li {
+        border: none;
+    }
+
+    nav a {
+        padding: 0.5rem;
+    }
+
+    nav a:hover {
+        background: transparent;
+        color: var(--secondary-color-bright, #FBBF24);
+    }
+
+    /* Hero Layout */
+    .hero {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 3rem;
+        padding: 5rem 2rem;
+    }
+
+    .hero-text {
+        text-align: left;
+    }
+
+    .hero h1 {
+        font-size: 3rem;
+        text-align: left;
+    }
+
+    .hero p {
+        font-size: 1.1rem;
+    }
+
+    /* Multi-Column Grid Layouts */
+    .about {
+        padding: 4rem 2rem;
+    }
+
+    .about p {
+        max-width: 900px;
+    }
+
+    .cards {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+    }
+
+    .card img {
+        height: 220px;
+    }
+
+    .why ul {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+
+    .testimonials {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
+
+    .testimonial {
+        margin: 0;
+    }
+
+    form {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 0;
+    }
+
+    footer {
+        padding: 2rem;
+    }
+
+    footer p {
+        margin: 0.8rem 0;
+    }
+}
+
+
+/* ==========================================
+   EXTRA LARGE SCREENS (1200px and above)
+========================================== */
+
+@media only screen and (min-width: 1200px) {
+
+    main {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .hero {
+        padding: 6rem 0;
+    }
+
+    .hero h1 {
+        font-size: 3.5rem;
+    }
 }
