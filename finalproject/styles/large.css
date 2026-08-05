@@ -69,10 +69,10 @@
         order: 2;
     }
 
-    .hero h2 {
-        font-size: 3rem;
-        text-align: left;
-    }
+  .hero h1 {
+    font-size: 3rem;
+    text-align: left;
+}
 
     .hero p {
         font-size: 1.1rem;
@@ -161,7 +161,7 @@
         margin: 0 auto;
     }
 
-    .hero h2 {
+    .hero h1 {
         font-size: 3.5rem;
     }
 
