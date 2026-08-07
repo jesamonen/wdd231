@@ -4,7 +4,7 @@
 // Handles Search, Category Filter, Favorites, and Modal
 // ==========================================
 
-import { getServices } from "./fetchData.js";
+import { getServices } from "./fetchdata.js";
 import {
     getFavorites,
     addFavorite,
