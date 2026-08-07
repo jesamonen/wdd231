@@ -6,6 +6,7 @@
 
 import { getServices } from "./fetchdata.js";
 import {
+    getFavorites,
     addFavorite,
     removeFavorite,
     isFavorite
@@ -20,15 +21,13 @@ const serviceContainer = document.querySelector("#serviceContainer");
 const searchInput = document.querySelector("#search");
 const categorySelect = document.querySelector("#category");
 
-let allProducts = [];
+let allProducts = []; // Master list fetched from API
 
 // ==========================================
-// LOAD SERVICES
+// DISPLAY SERVICES
 // ==========================================
 
 async function initServices() {
-    if (!serviceContainer) return;
-
     try {
         allProducts = await getServices();
 
@@ -37,6 +36,7 @@ async function initServices() {
             return;
         }
 
+        // Initial render with all products
         renderServices(allProducts);
 
     } catch (error) {
@@ -45,97 +45,80 @@ async function initServices() {
     }
 }
 
-// ==========================================
-// RENDER SERVICES
-// ==========================================
-
+// Render filtered or full list of products
 function renderServices(products) {
-    if (!serviceContainer) return;
-
-    serviceContainer.innerHTML = "";
-
     if (products.length === 0) {
         serviceContainer.innerHTML = "<p class='no-results'>No services found matching your criteria.</p>";
         return;
     }
 
-    // Use DocumentFragment to minimize DOM reflows
-    const fragment = document.createDocumentFragment();
-
-    products.forEach(product => {
+    // Build HTML string once and assign to DOM in a single write operation
+    serviceContainer.innerHTML = products.map(product => {
         const saved = isFavorite(product.id);
 
-        const card = document.createElement("div");
-        card.classList.add("service-card");
+        return `
+            <div class="service-card">
+                <img
+                    src="${product.image}"
+                    alt="${product.name}"
+                    loading="lazy"
+                    width="500"
+                    height="300">
 
-        card.innerHTML = `
-            <img
-                src="${product.image}"
-                alt="${product.name}"
-                loading="lazy"
-                width="500"
-                height="300">
+                <h2>${product.name}</h2>
 
-            <h2>${product.name}</h2>
+                <p>
+                    <strong>Category:</strong> ${product.category}
+                </p>
 
-            <p>
-                <strong>Category:</strong> ${product.category}
-            </p>
+                <p>
+                    <strong>Price:</strong> ${product.price}
+                </p>
 
-            <p>
-                <strong>Price:</strong> ${product.price}
-            </p>
+                <p>
+                    ${product.description}
+                </p>
 
-            <p>
-                ${product.description || ""}
-            </p>
+                <button
+                    class="details-btn"
+                    data-id="${product.id}">
+                    View Details
+                </button>
 
-            <button
-                class="details-btn"
-                data-id="${product.id}">
-                View Details
-            </button>
-
-            <button
-                class="favorite-btn"
-                data-id="${product.id}">
-                ${saved ? "❤️ Saved" : "♡ Save"}
-            </button>
+                <button
+                    class="favorite-btn"
+                    data-id="${product.id}">
+                    ${saved ? "❤️ Saved" : "♡ Save"}
+                </button>
+            </div>
         `;
-
-        fragment.appendChild(card);
-    });
-
-    serviceContainer.appendChild(fragment);
+    }).join("");
 }
 
 // ==========================================
-// SEARCH & CATEGORY FILTER
+// FILTER LOGIC (Search & Category)
 // ==========================================
 
 function filterServices() {
     const searchTerm = searchInput ? searchInput.value.trim().toLowerCase() : "";
     const selectedCategory = categorySelect ? categorySelect.value : "all";
 
-    const filteredProducts = allProducts.filter(product => {
-        const matchesCategory =
-            selectedCategory === "all" ||
+    const filtered = allProducts.filter(product => {
+        // Category check
+        const matchesCategory = selectedCategory === "all" || 
             product.category.toLowerCase() === selectedCategory.toLowerCase();
 
-        const matchesSearch =
-            searchTerm === "" ||
+        // Search text check (matches name or description)
+        const matchesSearch = searchTerm === "" ||
             product.name.toLowerCase().includes(searchTerm) ||
             (product.description && product.description.toLowerCase().includes(searchTerm));
 
         return matchesCategory && matchesSearch;
     });
 
-    renderServices(filteredProducts);
+    renderServices(filtered);
 }
 
-// ==========================================
-// EVENT LISTENERS
-// ==========================================
 
 if (searchInput) {
     searchInput.addEventListener("input", filterServices);
@@ -146,7 +129,7 @@ if (categorySelect) {
 }
 
 // ==========================================
-// MODAL & FAVORITES (Event Delegation)
+// (Modal & Favorites)
 // ==========================================
 
 if (serviceContainer) {
@@ -154,7 +137,7 @@ if (serviceContainer) {
         const detailsBtn = event.target.closest(".details-btn");
         const favoriteBtn = event.target.closest(".favorite-btn");
 
-        // View Details
+        // Handle Details Button Click
         if (detailsBtn) {
             const id = detailsBtn.dataset.id;
             const product = allProducts.find(item => String(item.id) === String(id));
@@ -165,7 +148,7 @@ if (serviceContainer) {
             return;
         }
 
-        // Favorite Toggle
+        // Handle Favorite Button Click
         if (favoriteBtn) {
             const id = favoriteBtn.dataset.id;
             const product = allProducts.find(item => String(item.id) === String(id));
@@ -184,7 +167,7 @@ if (serviceContainer) {
 }
 
 // ==========================================
-// START
+// INITIALIZE
 // ==========================================
 
 initServices();
