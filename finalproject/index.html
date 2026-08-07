@@ -33,11 +33,12 @@
 
     <!-- CSS -->
     <link rel="stylesheet" href="styles/base.css">
-    
     <link rel="stylesheet" href="styles/layout.css">
+    <link rel="stylesheet" href="styles/animate.css">
 
     <!-- JavaScript Module -->
     <script type="module" src="scripts/main.js"></script>
+    <script src="scripts/animate.js" defer></script>
 </head>
 
 <body>
@@ -86,14 +87,62 @@
 
     </div>
 
-    <div class="hero-image">
+    <!-- HERO IMAGE GALLERY / SLIDESHOW -->
+    <div class="hero-gallery">
 
-        <img
-            src="images/lux.webp"
-            alt="Professional Painting Services"
-            loading="eager"
-            width="600"
-            height="400">
+        <div class="gallery-container">
+            <div class="gallery-slide active">
+                <img
+                    src="images/lux.webp"
+                    alt="Luxury Paint Finish"
+                    loading="eager"
+                    width="600"
+                    height="400">
+                <span class="slide-caption">Luxury Interior Painting</span>
+            </div>
+
+            <div class="gallery-slide">
+                <img
+                    src="images/satin.webp"
+                    alt="Satin Paint Application"
+                    loading="lazy"
+                    width="600"
+                    height="400">
+                <span class="slide-caption">Premium Satin Finishes</span>
+            </div>
+
+            <div class="gallery-slide">
+                <img
+                    src="images/screeding.webp"
+                    alt="Wall Screeding Process"
+                    loading="lazy"
+                    width="600"
+                    height="400">
+                <span class="slide-caption">Expert Wall Screeding</span>
+            </div>
+
+            <div class="gallery-slide">
+                <img
+                    src="images/emulsion.webp"
+                    alt="Durable Emulsion Paint"
+                    loading="lazy"
+                    width="600"
+                    height="400">
+                <span class="slide-caption">Weather-Resistant Emulsion</span>
+            </div>
+
+            <!-- Navigation Controls -->
+            <button id="prevSlide" class="gallery-btn" aria-label="Previous Slide">&#10094;</button>
+            <button id="nextSlide" class="gallery-btn" aria-label="Next Slide">&#10095;</button>
+
+            <!-- Dots Indicator -->
+            <div class="gallery-dots">
+                <span class="dot active" data-index="0"></span>
+                <span class="dot" data-index="1"></span>
+                <span class="dot" data-index="2"></span>
+                <span class="dot" data-index="3"></span>
+            </div>
+        </div>
 
     </div>
 
@@ -263,8 +312,6 @@ Get Started
 </p>
 
 </footer>
-
-
 
 </body>
 

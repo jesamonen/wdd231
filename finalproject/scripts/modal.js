@@ -28,8 +28,6 @@ export function openModal(service) {
 
         <p><strong>Price:</strong> ${service.price}</p>
 
-        <p><strong>Coverage:</strong> ${service.coverage}</p>
-
         <p>${service.description}</p>
 
     `;

@@ -1,34 +1,52 @@
-// storage.js
+const FAVORITE_KEY = "favorites";
 
-const STORAGE_KEY = "favoriteServices";
-
-// Get all favorites
 export function getFavorites() {
-    return JSON.parse(localStorage.getItem(STORAGE_KEY)) || [];
+    return JSON.parse(
+        localStorage.getItem(FAVORITE_KEY)
+    ) || [];
 }
 
-// Save favorites
-export function saveFavorites(favorites) {
-    localStorage.setItem(STORAGE_KEY, JSON.stringify(favorites));
-}
 
-// Add a favorite
-export function addFavorite(id) {
+export function addFavorite(product) {
+
     const favorites = getFavorites();
 
-    favorites.push(id);
+    const alreadySaved = favorites.some(
+        item => item.id === product.id
+    );
 
-    saveFavorites(favorites);
+    if (!alreadySaved) {
+
+        favorites.push(product);
+
+        localStorage.setItem(
+            FAVORITE_KEY,
+            JSON.stringify(favorites)
+        );
+    }
 }
 
-// Remove a favorite
+
 export function removeFavorite(id) {
-    const favorites = getFavorites().filter(item => item !== id);
 
-    saveFavorites(favorites);
+    const favorites = getFavorites();
+
+    const updatedFavorites = favorites.filter(
+        item => item.id !== id
+    );
+
+    localStorage.setItem(
+        FAVORITE_KEY,
+        JSON.stringify(updatedFavorites)
+    );
 }
 
-// Check if a service is a favorite
+
 export function isFavorite(id) {
-    return getFavorites().includes(id);
+
+    const favorites = getFavorites();
+
+    return favorites.some(
+        item => item.id === id
+    );
 }
